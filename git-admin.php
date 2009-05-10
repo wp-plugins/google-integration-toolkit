@@ -63,7 +63,7 @@ class GoogleIntegrationToolkitAdmin {
 ?>
 <div id="dropmessage" class="updated" style="display:none;"></div>
 <div class="wrap">
-<h2><?php _e('Google Integration Toolkit - Options', 'wypiekacz'); ?></h2>
+<h2><?php _e('Google Integration Toolkit - Options', 'google-integration-toolkit'); ?></h2>
 
 <form name="dofollow" action="options.php" method="post">
 <?php settings_fields( 'google-integration-toolkit' ); ?>
@@ -159,7 +159,7 @@ class GoogleIntegrationToolkitAdmin {
 
 <tr>
 <th scope="row" style="text-align:right; vertical-align:top;">
-<label for="git_rss_tag_campaign"><?php _e('Source name:', 'google-integration-toolkit'); ?></label>
+<label for="git_rss_tag_campaign"><?php _e('Campaign name:', 'google-integration-toolkit'); ?></label>
 </th>
 <td>
 <input type="text" maxlength="20" size="20" id="git_rss_tag_campaign" name="git_rss_tag_campaign" value="<?php echo stripcslashes( get_option( 'git_rss_tag_campaign' ) ); ?>" /><br />
