@@ -121,6 +121,30 @@ msgid ""
 "parameter."
 msgstr "Ta wartość zostanie użyta jako wartość parametru <code>utm_campaign</code>."
 
+#: git-admin.php:172
+msgid "AdSense Section Targeting:"
+msgstr "AdSense - kierowanie na sekcje"
+
+#: git-admin.php:176
+msgid "Enable AdSense Section Targetting for Content:"
+msgstr "Włącz kierowanie na sekcje dla AdSense dla treści:"
+
+#: git-admin.php:180
+msgid ""
+"This option ads special HTML comment tags around posts, pages and excerpts. "
+"This may improve AdSense ads targeting. You can find more informations <a "
+"href=\"https://www.google.com/adsense/support/bin/answer.py?"
+"hl=en&answer=23168\">here</a>."
+msgstr "Ta opcja dodaje specjalne tagi komentarzy HTML dookoła postów, stron i ich fragmentów. To może poprawić dobór reklam AdSense na stronie. Więcej informacji na ten temat znajdziesz <a href=\"https://www.google.com/adsense/support/bin/answer.py?hl=pl&answer=23168\">tutaj</a>."
+
+#: git-admin.php:186
+msgid "Enable AdSense Section Targetting for Comments:"
+msgstr "Włącz kierowanie na sekcje AdSense dla komentarzy:"
+
+#: git-admin.php:190
+msgid "This option ads special HTML comment tags around comments."
+msgstr "Ta opcja dodaje specjalne tagi komentarzy HTML dookoła komentarzy"
+
 #: git-admin.php:174
 msgid "Save settings"
 msgstr "Zapisz ustawienia"

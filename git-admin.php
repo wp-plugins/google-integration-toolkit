@@ -187,7 +187,7 @@ class GoogleIntegrationToolkitAdmin {
 </th>
 <td>
 <input type="checkbox" id="git_adsense_tag_comments" name="git_adsense_tag_comments" value="yes" <?php checked( true, get_option( 'git_adsense_tag_comments' ) ); ?> /><br />
-<?php _e('This option ads special HTML comment tags around post excerpts.', 'google-integration-toolkit'); ?>
+<?php _e('This option ads special HTML comment tags around comments.', 'google-integration-toolkit'); ?>
 </td>
 </tr>
 

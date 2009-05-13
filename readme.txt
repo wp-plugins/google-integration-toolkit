@@ -1,9 +1,9 @@
 ﻿=== Plugin Name ===
 Contributors: sirzooro
-Tags: analytics, feed, feeds, google, gwt, integration, rss, seo, statistics, stats, tracking
+Tags: analytics, feed, feeds, google, gwt, integration, rss, seo, statistics, stats, tracking, section targeting, ad, ads, adsense, advertising, comment, comments
 Requires at least: 2.7
 Tested up to: 2.7.1
-Stable tag: 1.0
+Stable tag: 1.1
 
 This plugin helps you to integrate Google services (Analytics, Webmaster Tools, etc.) with Your Blog.
 
@@ -15,7 +15,8 @@ This version of Google Integration Toolkit plugin provides following features:
 
 * Integration with Google Webmasters Tools (both verification methods are supported: meta tag and verification file);
 * Integration with Google Analytics (with optional Google Analytics - Google AdSense integration);
-* RSS/Atom Feeds tagging - you can track visitors coming from your feed using Google Analytics
+* RSS/Atom Feeds tagging - you can track visitors coming from your feed using Google Analytics;
+* AdSense Section Targeting - improve AdSense ads targeting
 
 More features soon!
 
@@ -28,6 +29,10 @@ More features soon!
 1. Configure and enjoy :)
 
 == Changelog ==
+
+1.1
+
+* Added AdSense Section Targeting
 
 1.0
 

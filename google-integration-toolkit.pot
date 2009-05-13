@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2009 Daniel Fru¿yñski
+# Copyright (C) YEAR Daniel Fruyski
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/google-integration-toolkit\n"
-"POT-Creation-Date: 2009-05-10 09:56+0000\n"
+"POT-Creation-Date: 2009-05-13 20:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,116 +16,140 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: git-admin.php:58
+#: git-admin.php:60
 msgid "Configuration has been saved."
 msgstr ""
 
-#: git-admin.php:66
+#: git-admin.php:68
 msgid "Google Integration Toolkit - Options"
 msgstr ""
 
-#: git-admin.php:72
+#: git-admin.php:74
 msgid "Google Webmasters Tools:"
 msgstr ""
 
-#: git-admin.php:76
+#: git-admin.php:78
 msgid "Page verification method:"
 msgstr ""
 
-#: git-admin.php:79
+#: git-admin.php:81
 msgid "Meta tag"
 msgstr ""
 
-#: git-admin.php:80
+#: git-admin.php:82
 msgid "File"
 msgstr ""
 
-#: git-admin.php:86
+#: git-admin.php:88
 msgid "Meta tag value:"
 msgstr ""
 
-#: git-admin.php:90
+#: git-admin.php:92
 msgid "This tag looks like this:"
 msgstr ""
 
-#: git-admin.php:92
+#: git-admin.php:94
 msgid "Please put bolded part only to the field above."
 msgstr ""
 
-#: git-admin.php:98
+#: git-admin.php:100
 msgid "Verification file name:"
 msgstr ""
 
-#: git-admin.php:102
+#: git-admin.php:104
 #, php-format
 msgid "Name of this file starts with 'google', e.g. %s"
 msgstr ""
 
-#: git-admin.php:106
+#: git-admin.php:108
 msgid "Google Analytics:"
 msgstr ""
 
-#: git-admin.php:110
+#: git-admin.php:112
 msgid "Google Analytics ID:"
 msgstr ""
 
-#: git-admin.php:114
+#: git-admin.php:116
 msgid ""
 "Please find following line in your GA tracking code and copy bolded part to "
 "the field above:"
 msgstr ""
 
-#: git-admin.php:121
+#: git-admin.php:123
 msgid "Enable Google AdSense integration:"
 msgstr ""
 
-#: git-admin.php:128
+#: git-admin.php:130
 msgid "RSS/Atom Feeds tagging:"
 msgstr ""
 
-#: git-admin.php:132
+#: git-admin.php:134
 msgid "Enable RSS/Atom Feeds tagging:"
 msgstr ""
 
-#: git-admin.php:136
+#: git-admin.php:138
 msgid ""
 "This option tags all links in RSS/Atom feeds. This allows to track visitors "
 "from your feeds using Google Analytics."
 msgstr ""
 
-#: git-admin.php:142 git-admin.php:162
+#: git-admin.php:144
 msgid "Source name:"
 msgstr ""
 
-#: git-admin.php:146
+#: git-admin.php:148
 msgid ""
 "This value will be used as a value for the <code>utm_source</code> parameter."
 msgstr ""
 
-#: git-admin.php:152
+#: git-admin.php:154
 msgid "Medium name:"
 msgstr ""
 
-#: git-admin.php:156
+#: git-admin.php:158
 msgid ""
 "This value will be used as a value for the <code>utm_medium</code> parameter."
 msgstr ""
 
-#: git-admin.php:162
+#: git-admin.php:164
 msgid "Campaign name:"
 msgstr ""
 
-#: git-admin.php:166
+#: git-admin.php:168
 msgid ""
 "This value will be used as a value for the <code>utm_campaign</code> "
 "parameter."
 msgstr ""
 
-#: git-admin.php:174
+#: git-admin.php:172
+msgid "AdSense Section Targeting:"
+msgstr ""
+
+#: git-admin.php:176
+msgid "Enable AdSense Section Targetting for Content:"
+msgstr ""
+
+#: git-admin.php:180
+msgid ""
+"This option ads special HTML comment tags around posts, pages and excerpts. "
+"This may improve AdSense ads targeting. You can find more informations <a "
+"href=\"https://www.google.com/adsense/support/bin/answer.py?"
+"hl=en&answer=23168\">here</a>."
+msgstr ""
+
+#: git-admin.php:186
+msgid "Enable AdSense Section Targetting for Comments:"
+msgstr ""
+
+#: git-admin.php:190
+msgid "This option ads special HTML comment tags around comments."
+msgstr ""
+
+#: git-admin.php:198
 msgid "Save settings"
 msgstr ""
 
-#: google-integration-toolkit.php:88
+#: google-integration-toolkit.php:94
 msgid ""
 "Fatal Google Integration Toolkit error: $this->admin is not initialized!"
 msgstr ""
@@ -144,7 +168,7 @@ msgid ""
 msgstr ""
 
 #. Author of an extension
-msgid "Daniel Fru¿yñski"
+msgid "Daniel Fruyski"
 msgstr ""
 
 #. Author URI of an extension

@@ -4,7 +4,7 @@ Plugin Name: Google Integration Toolkit
 Plugin URI: http://www.poradnik-webmastera.com/projekty/google_integration_toolkit/
 Description: Integrate Google services (Analytics, Webmaster Tools, etc.) with Your Blog.
 Author: Daniel Frużyński
-Version: 1.0
+Version: 1.1
 Author URI: http://www.poradnik-webmastera.com/
 Text Domain: google-integration-toolkit
 */
