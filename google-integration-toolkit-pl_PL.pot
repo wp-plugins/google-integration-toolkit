@@ -26,11 +26,11 @@ msgstr "Google Integration Toolkit - Opcje"
 
 #: git-admin.php:72
 msgid "Google Webmasters Tools:"
-msgstr "Narzędzia Google dla Webmasterów"
+msgstr "Narzędzia Google dla Webmasterów:"
 
 #: git-admin.php:76
 msgid "Page verification method:"
-msgstr "Metoda weryfikacji strony"
+msgstr "Metoda weryfikacji strony:"
 
 #: git-admin.php:79
 msgid "Meta tag"

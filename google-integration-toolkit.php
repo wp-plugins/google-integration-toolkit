@@ -52,6 +52,12 @@ if ( !class_exists( 'GoogleIntegrationToolkit' ) ) {
 			// RSS tagging
 			add_filter( 'the_permalink_rss', array( &$this, 'the_permalink_rss' ) );
 			add_filter( 'the_content', array( &$this, 'the_content' ) );
+			
+			// Modify post excerpt and comments for various reasons
+			add_filter( 'the_excerpt', array( &$this, 'the_excerpt' ) );
+			
+			// Modify post content and comments for various reasons
+			add_filter( 'comment_text', array( &$this, 'comment_text' ) );
 		}
 		
 		// Initialize plugin
@@ -204,11 +210,37 @@ EOT;
 			}
 		}
 		
-		// RSS tagging - tag links in RSS' text
+		// Content modification function
 		function the_content( $content ) {
+			// RSS tagging - tag links in RSS' text
 			if ( is_feed() && get_option( 'git_rss_tagging' ) ) {
 				$content = preg_replace_callback( '/(<\s*a\s[^>]*?\bhref\s*=\s*")([^"]+)/', 
 					array( &$this, 'update_rss_link' ), $content );
+			}
+			
+			// AdSense section targetting
+			if ( !is_feed() && get_option( 'git_adsense_tag_posts' ) ) {
+				return '<!-- google_ad_section_start -->'.$content.'<!-- google_ad_section_end -->';
+			}
+			
+			return $content;
+		}
+		
+		// Content excerpts modification function
+		function the_excerpt( $content ) {
+			// AdSense section targetting
+			if ( !is_feed() && get_option( 'git_adsense_tag_posts' ) ) {
+				return '<!-- google_ad_section_start -->'.$content.'<!-- google_ad_section_end -->';
+			}
+			
+			return $content;
+		}
+		
+		// Comments modification function
+		function comment_text( $content ) {
+			// AdSense section targetting
+			if ( !is_feed() && get_option( 'git_adsense_tag_comments' ) ) {
+				return '<!-- google_ad_section_start -->'.$content.'<!-- google_ad_section_end -->';
 			}
 			
 			return $content;
@@ -224,6 +256,8 @@ EOT;
 	add_option( 'git_rss_tag_source', 'feed' ); // RSS tags - Campaign Source
 	add_option( 'git_rss_tag_medium', 'feed' ); // RSS tags - Campaign Medium
 	add_option( 'git_rss_tag_campaign', 'feed' ); // RSS tags - Campaign Name
+	add_option( 'git_adsense_tag_posts', false ); // AdSense Section Targetting - posts
+	add_option( 'git_adsense_tag_comments', false ); // AdSense Section Targetting - comments
 	
 	$wp_google_integration_toolkit = new GoogleIntegrationToolkit();
 }
