@@ -30,6 +30,8 @@ class GoogleIntegrationToolkitAdmin {
 		register_setting( 'google-integration-toolkit', 'git_rss_tag_source', 'trim' );
 		register_setting( 'google-integration-toolkit', 'git_rss_tag_medium', 'trim' );
 		register_setting( 'google-integration-toolkit', 'git_rss_tag_campaign', 'trim' );
+		register_setting( 'google-integration-toolkit', 'git_adsense_tag_posts', array( &$this, 'sanitize_bool' ) );
+		register_setting( 'google-integration-toolkit', 'git_adsense_tag_comments', array( &$this, 'sanitize_bool' ) );
 	}
 	
 	// Sanitize GWT mode
@@ -76,8 +78,8 @@ class GoogleIntegrationToolkitAdmin {
 <label><?php _e('Page verification method:', 'google-integration-toolkit'); ?></label>
 </th>
 <td>
-<input type="radio" id="git_gwt_mode_meta" name="git_gwt_mode" value="meta" <?php echo get_option( 'git_gwt_mode' ) == 'meta' ? 'checked="checked"' : ''; ?> /><label for="git_gwt_mode_meta"><?php _e('Meta tag', 'google-integration-toolkit'); ?></label><br />
-<input type="radio" id="git_gwt_mode_file" name="git_gwt_mode" value="file" <?php echo get_option( 'git_gwt_mode' ) == 'file' ? 'checked="checked"' : ''; ?> /><label for="git_gwt_mode_file"><?php _e('File', 'google-integration-toolkit'); ?></label>
+<input type="radio" id="git_gwt_mode_meta" name="git_gwt_mode" value="meta" <?php checked( 'meta', get_option( 'git_gwt_mode' ) ); ?> /><label for="git_gwt_mode_meta"><?php _e('Meta tag', 'google-integration-toolkit'); ?></label><br />
+<input type="radio" id="git_gwt_mode_file" name="git_gwt_mode" value="file" <?php checked( 'file', get_option( 'git_gwt_mode' ) ); ?> /><label for="git_gwt_mode_file"><?php _e('File', 'google-integration-toolkit'); ?></label>
 </td>
 </tr>
 
@@ -121,7 +123,7 @@ class GoogleIntegrationToolkitAdmin {
 <label for="git_analytics_adsense"><?php _e('Enable Google AdSense integration:', 'google-integration-toolkit'); ?></label>
 </th>
 <td>
-<input type="checkbox" id="git_analytics_adsense" name="git_analytics_adsense" value="yes" <?php echo get_option( 'git_analytics_adsense' ) ? 'checked="checked"' : ''; ?> />
+<input type="checkbox" id="git_analytics_adsense" name="git_analytics_adsense" value="yes" <?php checked( true, get_option( 'git_analytics_adsense' ) ); ?> />
 </td>
 </tr>
 
@@ -132,7 +134,7 @@ class GoogleIntegrationToolkitAdmin {
 <label for="git_rss_tagging"><?php _e('Enable RSS/Atom Feeds tagging:', 'google-integration-toolkit'); ?></label>
 </th>
 <td>
-<input type="checkbox" id="git_rss_tagging" name="git_rss_tagging" value="yes" <?php echo get_option( 'git_rss_tagging' ) ? 'checked="checked"' : ''; ?> /><br />
+<input type="checkbox" id="git_rss_tagging" name="git_rss_tagging" value="yes" <?php checked( true, get_option( 'git_rss_tagging' ) ); ?> /><br />
 <?php _e('This option tags all links in RSS/Atom feeds. This allows to track visitors from your feeds using Google Analytics.', 'google-integration-toolkit'); ?>
 </td>
 </tr>
@@ -164,6 +166,28 @@ class GoogleIntegrationToolkitAdmin {
 <td>
 <input type="text" maxlength="20" size="20" id="git_rss_tag_campaign" name="git_rss_tag_campaign" value="<?php echo stripcslashes( get_option( 'git_rss_tag_campaign' ) ); ?>" /><br />
 <?php _e('This value will be used as a value for the <code>utm_campaign</code> parameter.', 'google-integration-toolkit'); ?>
+</td>
+</tr>
+
+<tr><th colspan="2"><h3><?php _e('AdSense Section Targeting:', 'google-integration-toolkit'); ?></h3></th></tr>
+
+<tr>
+<th scope="row" style="text-align:right; vertical-align:top;">
+<label for="git_adsense_tag_posts"><?php _e('Enable AdSense Section Targetting for Content:', 'google-integration-toolkit'); ?></label>
+</th>
+<td>
+<input type="checkbox" id="git_adsense_tag_posts" name="git_adsense_tag_posts" value="yes" <?php checked( true, get_option( 'git_adsense_tag_posts' ) ); ?> /><br />
+<?php _e('This option ads special HTML comment tags around posts, pages and excerpts. This may improve AdSense ads targeting. You can find more informations <a href="https://www.google.com/adsense/support/bin/answer.py?hl=en&answer=23168">here</a>.', 'google-integration-toolkit'); ?>
+</td>
+</tr>
+
+<tr>
+<th scope="row" style="text-align:right; vertical-align:top;">
+<label for="git_adsense_tag_comments"><?php _e('Enable AdSense Section Targetting for Comments:', 'google-integration-toolkit'); ?></label>
+</th>
+<td>
+<input type="checkbox" id="git_adsense_tag_comments" name="git_adsense_tag_comments" value="yes" <?php checked( true, get_option( 'git_adsense_tag_comments' ) ); ?> /><br />
+<?php _e('This option ads special HTML comment tags around post excerpts.', 'google-integration-toolkit'); ?>
 </td>
 </tr>
 
