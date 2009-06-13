@@ -151,7 +151,7 @@ msgstr ""
 
 #: google-integration-toolkit.php:94
 msgid ""
-"Fatal Google Integration Toolkit error: $this->admin is not initialized!"
+"Fatal Google Integration Toolkit error: $this->admin is not initialised!"
 msgstr ""
 
 #. Plugin Name of an extension

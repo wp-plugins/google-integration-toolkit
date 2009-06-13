@@ -2,8 +2,8 @@
 Contributors: sirzooro
 Tags: analytics, feed, feeds, google, gwt, integration, rss, seo, statistics, stats, tracking, section targeting, ad, ads, adsense, advertising, comment, comments
 Requires at least: 2.7
-Tested up to: 2.7.1
-Stable tag: 1.1.1
+Tested up to: 2.8
+Stable tag: 1.1.2
 
 This plugin helps you to integrate Google services (Analytics, Webmaster Tools, etc.) with Your Blog.
 
@@ -29,6 +29,10 @@ More features soon!
 1. Configure and enjoy :)
 
 == Changelog ==
+
+1.1.2
+
+* Make plugin compatible with WordPress 2.8
 
 1.1.1
 
