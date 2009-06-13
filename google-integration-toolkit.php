@@ -4,7 +4,7 @@ Plugin Name: Google Integration Toolkit
 Plugin URI: http://www.poradnik-webmastera.com/projekty/google_integration_toolkit/
 Description: Integrate Google services (Analytics, Webmaster Tools, etc.) with Your Blog.
 Author: Daniel Frużyński
-Version: 1.1.1
+Version: 1.1.2
 Author URI: http://www.poradnik-webmastera.com/
 Text Domain: google-integration-toolkit
 */
@@ -33,7 +33,7 @@ if ( !class_exists( 'GoogleIntegrationToolkit' ) ) {
 		
 		// Constructor
 		function GoogleIntegrationToolkit() {
-			// Initialization
+			// Initialisation
 			add_action( 'init', array( &$this, 'init' ) );
 			add_action( 'admin_init', array( &$this, 'admin_init' ) );
 			
@@ -60,14 +60,14 @@ if ( !class_exists( 'GoogleIntegrationToolkit' ) ) {
 			add_filter( 'comment_text', array( &$this, 'comment_text' ) );
 		}
 		
-		// Initialize plugin
+		// Initialise plugin
 		function init() {
 			if ( function_exists( 'load_plugin_textdomain' ) ) {
 				load_plugin_textdomain( 'google-integration-toolkit', PLUGINDIR.'/'.dirname(plugin_basename(__FILE__)) );
 			}
 		}
 		
-		// Plugin initialization - admin
+		// Plugin initialisation - admin
 		function admin_init() {
 			require_once( dirname( __FILE__ ) . '/git-admin.php' );
 			$this->admin = new GoogleIntegrationToolkitAdmin();
@@ -87,11 +87,11 @@ if ( !class_exists( 'GoogleIntegrationToolkit' ) ) {
 				'Google Integration Toolkit', 10, $file, array( $this, 'options_panel' ) );
 		}
 		
-		// Check if $this->admin is initialized
+		// Check if $this->admin is initialised
 		function check_admin_helper() {
 			if ( is_null( $this->admin ) ) {
 				wp_die( '<b style="color:red">'.
-					__('Fatal Google Integration Toolkit error: $this->admin is not initialized!',
+					__('Fatal Google Integration Toolkit error: $this->admin is not initialised!',
 					'google-integration-toolkit').'</b>' );
 			}
 		}
@@ -110,7 +110,7 @@ if ( !class_exists( 'GoogleIntegrationToolkit' ) ) {
 				if ( $filename != '' ) {
 					// Extract root dir from blog url
 					$root = '/';
-					if ( preg_match( '#http://[^/]+(.+)#', get_option( 'url' ), $matches ) ) {
+					if ( preg_match( '#^http://[^/]+(/.+)$#', get_option( 'siteurl' ), $matches ) ) {
 						$root = $matches[1];
 					}
 					// Make sure it ends with slash
@@ -199,7 +199,7 @@ EOT;
 			$url = $matches[2];
 			if ( preg_match( '/^https?:/', $url ) ) {
 				// Tag links from this blog only
-				$blogurl = get_option( 'url' );
+				$blogurl = get_option( 'siteurl' );
 				if ( substr( $url, 0, strlen( $blogurl ) ) == $blogurl ) {
 					return $matches[1].$this->tag_rss_link( $url, true );
 				} else {
