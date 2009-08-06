@@ -2,8 +2,8 @@
 Contributors: sirzooro
 Tags: analytics, feed, feeds, google, gwt, integration, rss, seo, statistics, stats, tracking, section targeting, ad, ads, adsense, advertising, comment, comments
 Requires at least: 2.7
-Tested up to: 2.8
-Stable tag: 1.1.2
+Tested up to: 2.8.3
+Stable tag: 1.1.3
 
 This plugin helps you to integrate Google services (Analytics, Webmaster Tools, etc.) with Your Blog.
 
@@ -18,9 +18,15 @@ This version of Google Integration Toolkit plugin provides following features:
 * RSS/Atom Feeds tagging - you can track visitors coming from your feed using Google Analytics;
 * AdSense Section Targeting - improve AdSense ads targeting
 
+Available translations:
+
+* English
+* Polish (pl_PL)
+* Russian (ru_RU) - thanks [Fat Cower](www.fatcow.com)
+
 More features soon!
 
-[Changelog](http://wordpress.org/extend/plugins/google-integration-toolkit/other_notes/)
+[Changelog](http://wordpress.org/extend/plugins/google-integration-toolkit/changelog/)
 
 == Installation ==
 
@@ -30,18 +36,17 @@ More features soon!
 
 == Changelog ==
 
-1.1.2
+= 1.1.3 =
+* Added Russian translation (thanks [Fat Cower](www.fatcow.com))
 
+= 1.1.2 =
 * Make plugin compatible with WordPress 2.8
 
-1.1.1
-
+= 1.1.1 =
 * Make plugin compatible with PHP4
 
-1.1
-
+= 1.1 =
 * Added AdSense Section Targeting
 
-1.0
-
+= 1.0 =
 * Initial version
