@@ -1,9 +1,9 @@
 ﻿=== Plugin Name ===
 Contributors: sirzooro
-Tags: analytics, feed, feeds, google, gwt, integration, rss, seo, statistics, stats, tracking, section targeting, ad, ads, adsense, advertising, comment, comments
+Tags: analytics, feed, feeds, google, gwt, integration, rss, seo, statistics, stats, tracking, section targeting, ad, ads, adsense, advertising, comment, comments, 404
 Requires at least: 2.7
 Tested up to: 2.8.3
-Stable tag: 1.1.3
+Stable tag: 1.2
 
 This plugin helps you to integrate Google services (Analytics, Webmaster Tools, etc.) with Your Blog.
 
@@ -22,7 +22,7 @@ Available translations:
 
 * English
 * Polish (pl_PL)
-* Russian (ru_RU) - thanks [Fat Cower](www.fatcow.com)
+* Russian (ru_RU) - thanks [Fat Cower](http://www.fatcow.com/)
 
 More features soon!
 
@@ -36,8 +36,11 @@ More features soon!
 
 == Changelog ==
 
+= 1.2 =
+* Added 404 error tracking using Google Analytics
+
 = 1.1.3 =
-* Added Russian translation (thanks [Fat Cower](www.fatcow.com))
+* Added Russian translation (thanks [Fat Cower](http://www.fatcow.com/))
 
 = 1.1.2 =
 * Make plugin compatible with WordPress 2.8
