@@ -4,7 +4,7 @@ Plugin Name: Google Integration Toolkit
 Plugin URI: http://www.poradnik-webmastera.com/projekty/google_integration_toolkit/
 Description: Integrate Google services (Analytics, Webmaster Tools, etc.) with Your Blog.
 Author: Daniel Frużyński
-Version: 1.1.2
+Version: 1.2
 Author URI: http://www.poradnik-webmastera.com/
 Text Domain: google-integration-toolkit
 */
@@ -162,8 +162,16 @@ document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.
 <script type="text/javascript">
 try {
 var pageTracker = _gat._getTracker("$analytics_id");
-pageTracker._setAllowAnchor(true);
-pageTracker._trackPageview();
+
+EOT;
+				if ( is_404() && get_option( 'git_analytics_track_404' ) ) {
+					echo 'pageTracker._trackPageview("' . get_option( 'git_analytics_track_404_prefix' ) . 
+						'?page=" + document.location.pathname + document.location.search + "&from=" + document.referrer);', "\n";
+				} else {
+					echo 'pageTracker._setAllowAnchor(true);', "\n";
+					echo 'pageTracker._trackPageview();', "\n";
+				}
+				echo <<<EOT
 } catch(err) {}</script>
 
 EOT;
@@ -258,6 +266,8 @@ EOT;
 	add_option( 'git_rss_tag_campaign', 'feed' ); // RSS tags - Campaign Name
 	add_option( 'git_adsense_tag_posts', false ); // AdSense Section Targetting - posts
 	add_option( 'git_adsense_tag_comments', false ); // AdSense Section Targetting - comments
+	add_option( 'git_analytics_track_404', false ); // Track 404 errors using Analytics
+	add_option( 'git_analytics_track_404_prefix', '/404.html' ); // Prefix for 404 tracking using Analytics
 	
 	$wp_google_integration_toolkit = new GoogleIntegrationToolkit();
 }
