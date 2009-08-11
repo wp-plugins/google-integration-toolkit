@@ -32,6 +32,8 @@ class GoogleIntegrationToolkitAdmin {
 		register_setting( 'google-integration-toolkit', 'git_rss_tag_campaign', 'trim' );
 		register_setting( 'google-integration-toolkit', 'git_adsense_tag_posts', array( &$this, 'sanitize_bool' ) );
 		register_setting( 'google-integration-toolkit', 'git_adsense_tag_comments', array( &$this, 'sanitize_bool' ) );
+		register_setting( 'google-integration-toolkit', 'git_analytics_track_404', array( &$this, 'sanitize_bool' ) );
+		register_setting( 'google-integration-toolkit', 'git_analytics_track_404_prefix', 'trim' );
 	}
 	
 	// Sanitize GWT mode
@@ -71,6 +73,7 @@ class GoogleIntegrationToolkitAdmin {
 <?php settings_fields( 'google-integration-toolkit' ); ?>
 <table class="form-table">
 
+<!-- Google Webmasters Tools -->
 <tr><th colspan="2"><h3><?php _e('Google Webmasters Tools:', 'google-integration-toolkit'); ?></h3></th></tr>
 
 <tr>
@@ -105,6 +108,7 @@ class GoogleIntegrationToolkitAdmin {
 </td>
 </tr>
 
+<!-- Google Analytics -->
 <tr><th colspan="2"><h3><?php _e('Google Analytics:', 'google-integration-toolkit'); ?></h3></th></tr>
 
 <tr>
@@ -127,6 +131,7 @@ class GoogleIntegrationToolkitAdmin {
 </td>
 </tr>
 
+<!-- RSS/Atom Feeds tagging -->
 <tr><th colspan="2"><h3><?php _e('RSS/Atom Feeds tagging:', 'google-integration-toolkit'); ?></h3></th></tr>
 
 <tr>
@@ -169,6 +174,7 @@ class GoogleIntegrationToolkitAdmin {
 </td>
 </tr>
 
+<!-- AdSense Section Targeting -->
 <tr><th colspan="2"><h3><?php _e('AdSense Section Targeting:', 'google-integration-toolkit'); ?></h3></th></tr>
 
 <tr>
@@ -188,6 +194,28 @@ class GoogleIntegrationToolkitAdmin {
 <td>
 <input type="checkbox" id="git_adsense_tag_comments" name="git_adsense_tag_comments" value="yes" <?php checked( true, get_option( 'git_adsense_tag_comments' ) ); ?> /><br />
 <?php _e('This option ads special HTML comment tags around comments.', 'google-integration-toolkit'); ?>
+</td>
+</tr>
+
+<!-- 404 errors tracking -->
+<tr><th colspan="2"><h3><?php _e('404 errors tracking:', 'google-integration-toolkit'); ?></h3></th></tr>
+
+<tr>
+<th scope="row" style="text-align:right; vertical-align:top;">
+<label for="git_analytics_track_404"><?php _e('Track 404 errors with Google Analytics:', 'google-integration-toolkit'); ?></label>
+</th>
+<td>
+<input type="checkbox" id="git_analytics_track_404" name="git_analytics_track_404" value="yes" <?php checked( true, get_option( 'git_analytics_track_404' ) ); ?> /><br /><?php _e('Enable this option to track "Page not found" errors using Google Analytics', 'google-integration-toolkit'); ?>
+</td>
+</tr>
+
+<tr>
+<th scope="row" style="text-align:right; vertical-align:top;">
+<label for="git_analytics_track_404_prefix"><?php _e('URL prefix:', 'google-integration-toolkit'); ?></label>
+</th>
+<td>
+<input type="text" maxlength="100" size="15" id="git_analytics_track_404_prefix" name="git_analytics_track_404_prefix" value="<?php echo stripcslashes( get_option( 'git_analytics_track_404_prefix' ) ); ?>" /><br />
+<?php _e('All 404 errors will appear in Analytics Reports as visits to URL like <code>/404.html?page=[pagename.html?queryparameter]&from=[referrer]</code>, where <code>[pagename.html?queryparameters]</code> is the missing page name and referrer is the page URL from where the user reached the 404 page. You can change prefix <code>/404.html</code> to something else using this option.', 'google-integration-toolkit'); ?>
 </td>
 </tr>
 
