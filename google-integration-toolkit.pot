@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/google-integration-toolkit\n"
-"POT-Creation-Date: 2009-05-13 20:47+0000\n"
+"POT-Creation-Date: 2009-08-11 19:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,120 +16,120 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: git-admin.php:60
+#: git-admin.php:62
 msgid "Configuration has been saved."
 msgstr ""
 
-#: git-admin.php:68
+#: git-admin.php:70
 msgid "Google Integration Toolkit - Options"
 msgstr ""
 
-#: git-admin.php:74
+#: git-admin.php:77
 msgid "Google Webmasters Tools:"
 msgstr ""
 
-#: git-admin.php:78
+#: git-admin.php:81
 msgid "Page verification method:"
 msgstr ""
 
-#: git-admin.php:81
+#: git-admin.php:84
 msgid "Meta tag"
 msgstr ""
 
-#: git-admin.php:82
+#: git-admin.php:85
 msgid "File"
 msgstr ""
 
-#: git-admin.php:88
+#: git-admin.php:91
 msgid "Meta tag value:"
 msgstr ""
 
-#: git-admin.php:92
+#: git-admin.php:95
 msgid "This tag looks like this:"
 msgstr ""
 
-#: git-admin.php:94
+#: git-admin.php:97
 msgid "Please put bolded part only to the field above."
 msgstr ""
 
-#: git-admin.php:100
+#: git-admin.php:103
 msgid "Verification file name:"
 msgstr ""
 
-#: git-admin.php:104
+#: git-admin.php:107
 #, php-format
 msgid "Name of this file starts with 'google', e.g. %s"
 msgstr ""
 
-#: git-admin.php:108
+#: git-admin.php:112
 msgid "Google Analytics:"
 msgstr ""
 
-#: git-admin.php:112
+#: git-admin.php:116
 msgid "Google Analytics ID:"
 msgstr ""
 
-#: git-admin.php:116
+#: git-admin.php:120
 msgid ""
 "Please find following line in your GA tracking code and copy bolded part to "
 "the field above:"
 msgstr ""
 
-#: git-admin.php:123
+#: git-admin.php:127
 msgid "Enable Google AdSense integration:"
 msgstr ""
 
-#: git-admin.php:130
+#: git-admin.php:135
 msgid "RSS/Atom Feeds tagging:"
 msgstr ""
 
-#: git-admin.php:134
+#: git-admin.php:139
 msgid "Enable RSS/Atom Feeds tagging:"
 msgstr ""
 
-#: git-admin.php:138
+#: git-admin.php:143
 msgid ""
 "This option tags all links in RSS/Atom feeds. This allows to track visitors "
 "from your feeds using Google Analytics."
 msgstr ""
 
-#: git-admin.php:144
+#: git-admin.php:149
 msgid "Source name:"
 msgstr ""
 
-#: git-admin.php:148
+#: git-admin.php:153
 msgid ""
 "This value will be used as a value for the <code>utm_source</code> parameter."
 msgstr ""
 
-#: git-admin.php:154
+#: git-admin.php:159
 msgid "Medium name:"
 msgstr ""
 
-#: git-admin.php:158
+#: git-admin.php:163
 msgid ""
 "This value will be used as a value for the <code>utm_medium</code> parameter."
 msgstr ""
 
-#: git-admin.php:164
+#: git-admin.php:169
 msgid "Campaign name:"
 msgstr ""
 
-#: git-admin.php:168
+#: git-admin.php:173
 msgid ""
 "This value will be used as a value for the <code>utm_campaign</code> "
 "parameter."
 msgstr ""
 
-#: git-admin.php:172
+#: git-admin.php:178
 msgid "AdSense Section Targeting:"
 msgstr ""
 
-#: git-admin.php:176
+#: git-admin.php:182
 msgid "Enable AdSense Section Targetting for Content:"
 msgstr ""
 
-#: git-admin.php:180
+#: git-admin.php:186
 msgid ""
 "This option ads special HTML comment tags around posts, pages and excerpts. "
 "This may improve AdSense ads targeting. You can find more informations <a "
@@ -137,15 +137,41 @@ msgid ""
 "hl=en&answer=23168\">here</a>."
 msgstr ""
 
-#: git-admin.php:186
+#: git-admin.php:192
 msgid "Enable AdSense Section Targetting for Comments:"
 msgstr ""
 
-#: git-admin.php:190
+#: git-admin.php:196
 msgid "This option ads special HTML comment tags around comments."
 msgstr ""
 
-#: git-admin.php:198
+#: git-admin.php:201
+msgid "404 errors tracking:"
+msgstr ""
+
+#: git-admin.php:205
+msgid "Track 404 errors with Google Analytics:"
+msgstr ""
+
+#: git-admin.php:208
+msgid ""
+"Enable this option to track \"Page not found\" errors using Google Analytics"
+msgstr ""
+
+#: git-admin.php:214
+msgid "URL prefix:"
+msgstr ""
+
+#: git-admin.php:218
+msgid ""
+"All 404 errors will appear in Analytics Reports as visits to URL like "
+"<code>/404.html?page=[pagename.html?queryparameter]&from=[referrer]</code>, "
+"where <code>[pagename.html?queryparameters]</code> is the missing page name "
+"and referrer is the page URL from where the user reached the 404 page. You "
+"can change prefix <code>/404.html</code> to something else using this option."
+msgstr ""
+
+#: git-admin.php:226
 msgid "Save settings"
 msgstr ""
 

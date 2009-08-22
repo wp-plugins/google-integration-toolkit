@@ -3,155 +3,164 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Google Integration Toolkit 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/google-integration-toolkit\n"
-"POT-Creation-Date: 2009-05-10 09:56+0000\n"
-"PO-Revision-Date: 2009-05-10 12:00+0100\n"
+"POT-Creation-Date: 2009-08-11 19:52+0000\n"
+"PO-Revision-Date: 2009-08-11 21:58+0100\n"
 "Last-Translator: Daniel Frużyński <daniel [A-T] poradnik-webmastera.com>\n"
 "Language-Team: Daniel Frużyński <daniel [A-T] poradnik-webmastera.com>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Polish\n"
+"X-Poedit-Country: POLAND\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
-#: git-admin.php:58
+#: git-admin.php:62
 msgid "Configuration has been saved."
 msgstr "Konfiguracja została zapisana."
 
-#: git-admin.php:66
+#: git-admin.php:70
 msgid "Google Integration Toolkit - Options"
 msgstr "Google Integration Toolkit - Opcje"
 
-#: git-admin.php:72
+#: git-admin.php:77
 msgid "Google Webmasters Tools:"
 msgstr "Narzędzia Google dla Webmasterów:"
 
-#: git-admin.php:76
+#: git-admin.php:81
 msgid "Page verification method:"
 msgstr "Metoda weryfikacji strony:"
 
-#: git-admin.php:79
+#: git-admin.php:84
 msgid "Meta tag"
 msgstr "Tag meta"
 
-#: git-admin.php:80
+#: git-admin.php:85
 msgid "File"
 msgstr "Plik"
 
-#: git-admin.php:86
+#: git-admin.php:91
 msgid "Meta tag value:"
 msgstr "Wartość tagu meta:"
 
-#: git-admin.php:90
+#: git-admin.php:95
 msgid "This tag looks like this:"
 msgstr "Ten tag wygląda następująco:"
 
-#: git-admin.php:92
+#: git-admin.php:97
 msgid "Please put bolded part only to the field above."
 msgstr "Proszę wkleić do powyższego pola tylko pogrubiony fragment."
 
-#: git-admin.php:98
+#: git-admin.php:103
 msgid "Verification file name:"
 msgstr "Nazwa pliku weryfikacyjnego:"
 
-#: git-admin.php:102
+#: git-admin.php:107
 #, php-format
 msgid "Name of this file starts with 'google', e.g. %s"
 msgstr "Nazwa tego pliku zaczyna się od \"google\", np. %s"
 
-#: git-admin.php:106
+#: git-admin.php:112
 msgid "Google Analytics:"
 msgstr "Google Analytics:"
 
-#: git-admin.php:110
+#: git-admin.php:116
 msgid "Google Analytics ID:"
 msgstr "Identyfikator Google Analytics:"
 
-#: git-admin.php:114
-msgid ""
-"Please find following line in your GA tracking code and copy bolded part to "
-"the field above:"
+#: git-admin.php:120
+msgid "Please find following line in your GA tracking code and copy bolded part to the field above:"
 msgstr "Odszukaj poniższą linię w swoim kodzie śledzenia GA i wklej pogrubiony fragment do powyższego pola:"
 
-#: git-admin.php:121
+#: git-admin.php:127
 msgid "Enable Google AdSense integration:"
 msgstr "Włącz integrację z Google AdSense:"
 
-#: git-admin.php:128
+#: git-admin.php:135
 msgid "RSS/Atom Feeds tagging:"
 msgstr "Tagowanie kanałów RSS/Atom:"
 
-#: git-admin.php:132
+#: git-admin.php:139
 msgid "Enable RSS/Atom Feeds tagging:"
 msgstr "Włącz tagowanie kanałów RSS/Atom:"
 
-#: git-admin.php:136
-msgid ""
-"This option tags all links in RSS/Atom feeds. This allows to track visitors "
-"from your feeds using Google Analytics."
+#: git-admin.php:143
+msgid "This option tags all links in RSS/Atom feeds. This allows to track visitors from your feeds using Google Analytics."
 msgstr "Ta opcja włącza tagowanie linków w kanałach RSS/Atom. Pozwala to na śledzenie odwiedzających z Twoich kanałów za pomocą Google Analytics."
 
-#: git-admin.php:142 git-admin.php:162
+#: git-admin.php:149
 msgid "Source name:"
 msgstr "Nazwa źródła:"
 
-#: git-admin.php:146
-msgid ""
-"This value will be used as a value for the <code>utm_source</code> parameter."
+#: git-admin.php:153
+msgid "This value will be used as a value for the <code>utm_source</code> parameter."
 msgstr "Ta wartość zostanie użyta jako wartość parametru <code>utm_source</code>."
 
-#: git-admin.php:152
+#: git-admin.php:159
 msgid "Medium name:"
 msgstr "Nazwa medium:"
 
-#: git-admin.php:156
-msgid ""
-"This value will be used as a value for the <code>utm_medium</code> parameter."
+#: git-admin.php:163
+msgid "This value will be used as a value for the <code>utm_medium</code> parameter."
 msgstr "Ta wartość zostanie użyta jako wartość parametru <code>utm_medium</code>."
 
-#: git-admin.php:162
+#: git-admin.php:169
 msgid "Campaign name:"
 msgstr "Nazwa kampanii:"
 
-#: git-admin.php:166
-msgid ""
-"This value will be used as a value for the <code>utm_campaign</code> "
-"parameter."
+#: git-admin.php:173
+msgid "This value will be used as a value for the <code>utm_campaign</code> parameter."
 msgstr "Ta wartość zostanie użyta jako wartość parametru <code>utm_campaign</code>."
 
-#: git-admin.php:172
+#: git-admin.php:178
 msgid "AdSense Section Targeting:"
 msgstr "AdSense - kierowanie na sekcje"
 
-#: git-admin.php:176
+#: git-admin.php:182
 msgid "Enable AdSense Section Targetting for Content:"
 msgstr "Włącz kierowanie na sekcje dla AdSense dla treści:"
 
-#: git-admin.php:180
-msgid ""
-"This option ads special HTML comment tags around posts, pages and excerpts. "
-"This may improve AdSense ads targeting. You can find more informations <a "
-"href=\"https://www.google.com/adsense/support/bin/answer.py?"
-"hl=en&answer=23168\">here</a>."
+#: git-admin.php:186
+msgid "This option ads special HTML comment tags around posts, pages and excerpts. This may improve AdSense ads targeting. You can find more informations <a href=\"https://www.google.com/adsense/support/bin/answer.py?hl=en&answer=23168\">here</a>."
 msgstr "Ta opcja dodaje specjalne tagi komentarzy HTML dookoła postów, stron i ich fragmentów. To może poprawić dobór reklam AdSense na stronie. Więcej informacji na ten temat znajdziesz <a href=\"https://www.google.com/adsense/support/bin/answer.py?hl=pl&answer=23168\">tutaj</a>."
 
-#: git-admin.php:186
+#: git-admin.php:192
 msgid "Enable AdSense Section Targetting for Comments:"
 msgstr "Włącz kierowanie na sekcje AdSense dla komentarzy:"
 
-#: git-admin.php:190
+#: git-admin.php:196
 msgid "This option ads special HTML comment tags around comments."
 msgstr "Ta opcja dodaje specjalne tagi komentarzy HTML dookoła komentarzy"
 
-#: git-admin.php:174
+#: git-admin.php:201
+msgid "404 errors tracking:"
+msgstr "Śledzenie błędów 404:"
+
+#: git-admin.php:205
+msgid "Track 404 errors with Google Analytics:"
+msgstr "Śledź błędy 404 używając Google Analytics:"
+
+#: git-admin.php:208
+msgid "Enable this option to track \"Page not found\" errors using Google Analytics"
+msgstr "Włącz tą opcję aby śledzić błędy \"Nie znaleziono strony\" za pomocą Google Analytics"
+
+#: git-admin.php:214
+msgid "URL prefix:"
+msgstr "Prefiks adresu:"
+
+#: git-admin.php:218
+msgid "All 404 errors will appear in Analytics Reports as visits to URL like <code>/404.html?page=[pagename.html?queryparameter]&from=[referrer]</code>, where <code>[pagename.html?queryparameters]</code> is the missing page name and referrer is the page URL from where the user reached the 404 page. You can change prefix <code>/404.html</code> to something else using this option."
+msgstr "Wszystkie błędy 404 pojawią się w raportach Google Analytics jako wywołania adresów typu <code>/404.html?page=[pagename.html?queryparameter]&from=[referrer]</code>, gdzie <code>[pagename.html?queryparameters]</code> jest adresem nie znalezionej strony, a referer jest adresem strony z której użytkownik wszedł na stronę 404. Możesz zmienić prefiks <code>/404.html</code> na inny używając tej opcji."
+
+#: git-admin.php:226
 msgid "Save settings"
 msgstr "Zapisz ustawienia"
 
-#: google-integration-toolkit.php:88
-msgid ""
-"Fatal Google Integration Toolkit error: $this->admin is not initialised!"
+#: google-integration-toolkit.php:94
+msgid "Fatal Google Integration Toolkit error: $this->admin is not initialised!"
 msgstr "Błąd krytyczny Google Integration Toolkit: $this->admin nie jest zainicjalizowany!"
 
 #. Plugin Name of an extension
@@ -160,17 +169,17 @@ msgstr "Google Integration Toolkit"
 
 #. Plugin URI of an extension
 msgid "http://www.poradnik-webmastera.com/projekty/google_integration_toolkit/"
-msgstr ""
+msgstr "http://www.poradnik-webmastera.com/projekty/google_integration_toolkit/"
 
 #. Description of an extension
-msgid ""
-"Integrate Google services (Analytics, Webmaster Tools, etc.) with Your Blog."
+msgid "Integrate Google services (Analytics, Webmaster Tools, etc.) with Your Blog."
 msgstr "Integruje serwisy Google (Analytics, Webmaster Tools, itp.) z Twoim Blogiem."
 
 #. Author of an extension
-msgid "Daniel Frużyński"
-msgstr ""
+msgid "Daniel Fruyski"
+msgstr "Daniel Fruyski"
 
 #. Author URI of an extension
 msgid "http://www.poradnik-webmastera.com/"
-msgstr ""
+msgstr "http://www.poradnik-webmastera.com/"
+
