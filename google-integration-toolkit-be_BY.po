@@ -1,0 +1,163 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tweet This\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-07-30 00:38-0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Fat Cow <zhr@tut.by>\n"
+"Language-Team: ilyuha <iliamrv@ya.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Belarusian\n"
+"X-Poedit-Country: BELARUS\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: git-admin.php:60
+msgid "Configuration has been saved."
+msgstr "Канфігурацыя захавана."
+
+#: git-admin.php:68
+msgid "Google Integration Toolkit - Options"
+msgstr "Google Integration Toolkit - Налады"
+
+#: git-admin.php:74
+msgid "Google Webmasters Tools:"
+msgstr "Google Webmasters прылады:"
+
+#: git-admin.php:78
+msgid "Page verification method:"
+msgstr "Метад праверкі старонкі:"
+
+#: git-admin.php:81
+msgid "Meta tag"
+msgstr "Мета тэг"
+
+#: git-admin.php:82
+msgid "File"
+msgstr "Файл"
+
+#: git-admin.php:88
+msgid "Meta tag value:"
+msgstr "Значэнне мета тэга"
+
+#: git-admin.php:92
+msgid "This tag looks like this:"
+msgstr "Тэг выглядае так:"
+
+#: git-admin.php:94
+msgid "Please put bolded part only to the field above."
+msgstr "Пакіньце вылучаную частку толькі ў поле вышэй."
+
+#: git-admin.php:100
+msgid "Verification file name:"
+msgstr "Імя файла верыфікацыі:"
+
+#: git-admin.php:104
+#, php-format
+msgid "Name of this file starts with 'google', e.g. %s"
+msgstr "Імя гэтага файла пачынаецца з 'google', %s"
+
+#: git-admin.php:108
+msgid "Google Analytics:"
+msgstr "Google Analytics:"
+
+#: git-admin.php:112
+msgid "Google Analytics ID:"
+msgstr "Google Analytics ID:"
+
+#: git-admin.php:116
+msgid "Please find following line in your GA tracking code and copy bolded part to the field above:"
+msgstr "Знайдзіце наступную лінію кода GA і скапіюйце вылучаную частку толькі ў поле вышэй:"
+
+#: git-admin.php:123
+msgid "Enable Google AdSense integration:"
+msgstr "Уключыць інтэграцыю Google AdSense:"
+
+#: git-admin.php:130
+msgid "RSS/Atom Feeds tagging:"
+msgstr "RSS/Atom теггинг стужак:"
+
+#: git-admin.php:134
+msgid "Enable RSS/Atom Feeds tagging:"
+msgstr "Уключыць RSS/Atom теггинг стужак:"
+
+#: git-admin.php:138
+msgid "This option tags all links in RSS/Atom feeds. This allows to track visitors from your feeds using Google Analytics."
+msgstr "Гэта налада RSS/Atom стужак. Гэта дазваляе наведвальнікам выкарыстоўваць Google Analytics."
+
+#: git-admin.php:144
+msgid "Source name:"
+msgstr "Імя крыніцы:"
+
+#: git-admin.php:148
+msgid "This value will be used as a value for the <code>utm_source</code> parameter."
+msgstr "Гэта значэнне будзе выкарыстоўвацца як значэнне для параметру <code>utm_source</code>."
+
+#: git-admin.php:154
+msgid "Medium name:"
+msgstr "Сярэдняе імя:"
+
+#: git-admin.php:158
+msgid "This value will be used as a value for the <code>utm_medium</code> parameter."
+msgstr "Гэта значэнне будзе выкарыстоўвацца як значэнне для параметру <code>utm_medium</code>."
+
+#: git-admin.php:164
+msgid "Campaign name:"
+msgstr "Імя кампаніі:"
+
+#: git-admin.php:168
+msgid "This value will be used as a value for the <code>utm_campaign</code> parameter."
+msgstr "Гэта значэнне будзе выкарыстоўвацца як значэнне для параметру <code>utm_campaign</code>."
+
+#: git-admin.php:172
+msgid "AdSense Section Targeting:"
+msgstr "Прызначэнне секцыі AdSense:"
+
+#: git-admin.php:176
+msgid "Enable AdSense Section Targetting for Content:"
+msgstr "Уключыць прызначэнне секцыі AdSense для ўтрымання:"
+
+#: git-admin.php:180
+msgid "This option ads special HTML comment tags around posts, pages and excerpts. This may improve AdSense ads targeting. You can find more informations <a href=\"https://www.google.com/adsense/support/bin/answer.py?hl=en&answer=23168\">here</a>."
+msgstr "Гэта налада дадае адмысловы HTML каментар вакол пастоў, старонак і вынятак. Вы можаце знайсці больш інфармацыі <a href=\"https://www.google.com/adsense/support/bin/answer.py?hl=en&answer=23168\">тут</a>."
+
+#: git-admin.php:186
+msgid "Enable AdSense Section Targetting for Comments:"
+msgstr "Уключыць прызначэнне секцыі AdSense для каментароў:"
+
+#: git-admin.php:190
+msgid "This option ads special HTML comment tags around comments."
+msgstr "Гэта налада дадае адмысловы HTML каментар вакол каментароў."
+
+#: git-admin.php:198
+msgid "Save settings"
+msgstr "Захаваць налады"
+
+#: google-integration-toolkit.php:94
+msgid "Fatal Google Integration Toolkit error: $this->admin is not initialised!"
+msgstr "Памылка Google Integration Toolkit: $this->адміністратар не инициилизирован!"
+
+#. Plugin Name of an extension
+msgid "Google Integration Toolkit"
+msgstr "Google Integration Toolkit"
+
+#. Plugin URI of an extension
+msgid "http://www.poradnik-webmastera.com/projekty/google_integration_toolkit/"
+msgstr "http://www.poradnik-webmastera.com/projekty/google_integration_toolkit/"
+
+#. Description of an extension
+msgid "Integrate Google services (Analytics, Webmaster Tools, etc.) with Your Blog."
+msgstr "Інтэграцыя сэрвісаў Google (Analytics, Webmaster Tools, etc.) з вашым блогам."
+
+#. Author of an extension
+msgid "Daniel Fruyski"
+msgstr "Daniel Fruyski"
+
+#. Author URI of an extension
+msgid "http://www.poradnik-webmastera.com/"
+msgstr "http://www.poradnik-webmastera.com/"
+
