@@ -2,8 +2,8 @@
 Contributors: sirzooro
 Tags: analytics, feed, feeds, google, gwt, integration, rss, seo, statistics, stats, tracking, section targeting, ad, ads, adsense, advertising, comment, comments, 404
 Requires at least: 2.7
-Tested up to: 2.8.3
-Stable tag: 1.2.1
+Tested up to: 2.8.4
+Stable tag: 1.2.2
 
 This plugin helps you to integrate Google services (Analytics, Webmaster Tools, etc.) with Your Blog.
 
@@ -24,6 +24,7 @@ Available translations:
 * English
 * Polish (pl_PL)
 * Russian (ru_RU) - thanks [Fat Cower](http://www.fatcow.com/)
+* Belorussian (be_BY) - thanks [ilyuha](http://antsar.info/)
 
 More features soon!
 
@@ -36,6 +37,9 @@ More features soon!
 1. Configure and enjoy :)
 
 == Changelog ==
+
+= 1.2.2 =
+* Added Belorussian translation (thanks [ilyuha](http://antsar.info/))
 
 = 1.2.1 =
 * Moved admin code to main file to avoid "Fatal Google Integration Toolkit error: $this->admin is not initialised!" error
