@@ -3,7 +3,7 @@ Contributors: sirzooro
 Tags: analytics, feed, feeds, google, gwt, integration, rss, seo, statistics, stats, tracking, section targeting, ad, ads, adsense, advertising, comment, comments, 404
 Requires at least: 2.7
 Tested up to: 2.8.4
-Stable tag: 1.2.2
+Stable tag: 1.3
 
 This plugin helps you to integrate Google services (Analytics, Webmaster Tools, etc.) with Your Blog.
 
@@ -36,7 +36,24 @@ More features soon!
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Configure and enjoy :)
 
+== Frequently Asked Questions ==
+
+= Why I cannot verify my page in Google Webmasters Tools using verification file? =
+
+Starting from October 2009 Google checks contents of file used for verification - it should contains something like this:
+
+`google-site-verification: googleabcdefghijklmnop.html`
+
+Please make sure that you use Google Integration Toolkit in version 1.3 or newer. If you do, open verification file in your web browser and check page source to make sure there is no extra content (e.g. HTML comment). I am aware of WP Super Cache plugin, which adds such comment in version 0.9.6.1 or older - if you use it, please upgrade to version 0.9.7 or newer. If you find another conflicting plugin, please inform its author about this issue, or me.
+
+= Why I cannot verify my page in Google Webmasters Tools using meta tag? =
+
+Starting from October 2009 Google changed name of its meta verification tag from `<meta name="verify-v1" content="..." />` to `<meta name="google-site-verification" content="..." />`. Please make sure that you are using Google Integration Toolkit in version 1.3 or newer, and check its configuration to make sure you use the new tag.
+
 == Changelog ==
+
+= 1.3 =
+* Added support for new verification meta tag and new format of verification file for Google Webmasters Tools
 
 = 1.2.2 =
 * Added Belorussian translation (thanks [ilyuha](http://antsar.info/))

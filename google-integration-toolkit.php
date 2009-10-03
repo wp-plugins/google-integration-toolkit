@@ -4,7 +4,7 @@ Plugin Name: Google Integration Toolkit
 Plugin URI: http://www.poradnik-webmastera.com/projekty/google_integration_toolkit/
 Description: Integrate Google services (Analytics, Webmaster Tools, etc.) with Your Blog.
 Author: Daniel Frużyński
-Version: 1.2.2
+Version: 1.3
 Author URI: http://www.poradnik-webmastera.com/
 Text Domain: google-integration-toolkit
 */
@@ -113,7 +113,8 @@ if ( !class_exists( 'GoogleIntegrationToolkit' ) ) {
 					}
 					// Check if request is for GWT verification file
 					if ( $root.$filename == $_SERVER['REQUEST_URI'] ) {
-						wp_die( 'Welcome, Google!', '200 OK', array( 'response' => 200 ) );
+						//wp_die( 'Welcome, Google!', '200 OK', array( 'response' => 200 ) );
+						echo 'google-site-verification: ', $filename;
 						exit();
 					}
 				}
@@ -125,11 +126,13 @@ if ( !class_exists( 'GoogleIntegrationToolkit' ) ) {
 		// Extra entries in <head> section
 		function wp_head() {
 			// Google Webmasters Tools
-			if ( get_option( 'git_gwt_mode' ) == 'meta' ) {
-				$meta = get_option( 'git_gwt_meta' );
-				if ( $meta != '' ) {
-					echo '<meta name="verify-v1" content="', $meta, '" />', "\n";
-				}
+			$gwt_mode = get_option( 'git_gwt_mode' );
+			$meta = get_option( 'git_gwt_meta' );
+			if ( ( $gwt_mode == 'meta2' ) && ( $meta != '' ) ) {
+				echo '<meta name="google-site-verification" content="', $meta, '" />', "\n";
+			}
+			elseif ( ( $gwt_mode == 'meta' ) && ( $meta != '' ) ) {
+				echo '<meta name="verify-v1" content="', $meta, '" />', "\n";
 			}
 			
 			// Google Analytics integration with Google AdSense
@@ -275,8 +278,10 @@ EOT;
 <label><?php _e('Page verification method:', 'google-integration-toolkit'); ?></label>
 </th>
 <td>
-<input type="radio" id="git_gwt_mode_meta" name="git_gwt_mode" value="meta" <?php checked( 'meta', get_option( 'git_gwt_mode' ) ); ?> /><label for="git_gwt_mode_meta"><?php _e('Meta tag', 'google-integration-toolkit'); ?></label><br />
-<input type="radio" id="git_gwt_mode_file" name="git_gwt_mode" value="file" <?php checked( 'file', get_option( 'git_gwt_mode' ) ); ?> /><label for="git_gwt_mode_file"><?php _e('File', 'google-integration-toolkit'); ?></label>
+<input type="radio" id="git_gwt_mode_meta2" name="git_gwt_mode" value="meta2" <?php checked( 'meta2', get_option( 'git_gwt_mode' ) ); ?> /><label for="git_gwt_mode_meta2"><?php _e('Meta tag <code>&lt;meta name=&quot;google-site-verification&quot; content=&quot;...&quot; /&gt;</code>', 'google-integration-toolkit'); ?></label><br />
+<input type="radio" id="git_gwt_mode_meta" name="git_gwt_mode" value="meta" <?php checked( 'meta', get_option( 'git_gwt_mode' ) ); ?> /><label for="git_gwt_mode_meta"><?php _e('Meta tag <code>&lt;meta name=&quot;verify-v1&quot; content=&quot;...&quot; /&gt;</code>', 'google-integration-toolkit'); ?></label><br />
+<input type="radio" id="git_gwt_mode_file" name="git_gwt_mode" value="file" <?php checked( 'file', get_option( 'git_gwt_mode' ) ); ?> /><label for="git_gwt_mode_file"><?php _e('File', 'google-integration-toolkit'); ?></label><br />
+<?php _e('<b>Note:</b> Please use <code>google-site-verification</code> meta tag or file to verify new websites. Meta tag <code>verify-v1</code> is supported for backward compatibility only.', 'google-integration-toolkit'); ?>
 </td>
 </tr>
 
@@ -287,6 +292,8 @@ EOT;
 <td>
 <input type="text" maxlength="100" size="50" id="git_gwt_meta" name="git_gwt_meta" value="<?php echo stripcslashes( get_option( 'git_gwt_meta' ) ); ?>" /><br />
 <?php _e('This tag looks like this:', 'google-integration-toolkit'); ?><br />
+<code>&lt;meta name=&quot;google-site-verification&quot; content=&quot;<b>abcdefghijklmnopqrstuvwzyz123456789abcdefghi</b>&quot; /&gt;</code><br />
+<?php _e('or', 'google-integration-toolkit'); ?><br />
 <code>&lt;meta name=&quot;verify-v1&quot; content=&quot;<b>abcdefghijklmnopqrstuvwzyz123456789abcdefghi</b>&quot; /&gt;</code><br />
 <?php _e('Please put bolded part only to the field above.', 'google-integration-toolkit'); ?>
 </td>
@@ -427,8 +434,8 @@ EOT;
 		
 		// Sanitize GWT mode
 		function sanitize_gwt_mode( $mode ) {
-			if ( ( $mode != 'meta' ) && ( $mode != 'file' ) ) {
-				return 'meta';
+			if ( ( $mode != 'meta' ) && ( $mode != 'meta2' ) && ( $mode != 'file' ) ) {
+				return 'meta2';
 			} else {
 				return $mode;
 			}
@@ -444,7 +451,7 @@ EOT;
 		}
 	}
 	
-	add_option( 'git_gwt_mode', 'meta' ); // GWT: add meta tag ('meta') or use file ('file')
+	add_option( 'git_gwt_mode', 'meta2' ); // GWT: add meta tag 'google-site-verification' ('meta2') or use file ('file'). 'meta'/'verify-v1' is supported for backward compatibility only
 	add_option( 'git_gwt_meta', '' ); // GWT ID
 	add_option( 'git_gwt_filename', '' ); // GWT FileName
 	add_option( 'git_analytics_id', '' ); // Analytics ID
