@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/google-integration-toolkit\n"
-"POT-Creation-Date: 2009-08-11 19:52+0000\n"
+"POT-Creation-Date: 2009-10-03 13:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,120 +16,139 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: git-admin.php:62
+#: google-integration-toolkit.php:259
 msgid "Configuration has been saved."
 msgstr ""
 
-#: git-admin.php:70
+#: google-integration-toolkit.php:267
 msgid "Google Integration Toolkit - Options"
 msgstr ""
 
-#: git-admin.php:77
+#: google-integration-toolkit.php:274
 msgid "Google Webmasters Tools:"
 msgstr ""
 
-#: git-admin.php:81
+#: google-integration-toolkit.php:278
 msgid "Page verification method:"
 msgstr ""
 
-#: git-admin.php:84
-msgid "Meta tag"
+#: google-integration-toolkit.php:281
+msgid ""
+"Meta tag <code>&lt;meta name=&quot;google-site-verification&quot; "
+"content=&quot;...&quot; /&gt;</code>"
 msgstr ""
 
-#: git-admin.php:85
+#: google-integration-toolkit.php:282
+msgid ""
+"Meta tag <code>&lt;meta name=&quot;verify-v1&quot; content=&quot;...&quot; /"
+"&gt;</code>"
+msgstr ""
+
+#: google-integration-toolkit.php:283
 msgid "File"
 msgstr ""
 
-#: git-admin.php:91
+#: google-integration-toolkit.php:284
+msgid ""
+"<b>Note:</b> Please use <code>google-site-verification</code> meta tag or "
+"file to verify new websites. Meta tag <code>verify-v1</code> is supported "
+"for backward compatibility only."
+msgstr ""
+
+#: google-integration-toolkit.php:290
 msgid "Meta tag value:"
 msgstr ""
 
-#: git-admin.php:95
+#: google-integration-toolkit.php:294
 msgid "This tag looks like this:"
 msgstr ""
 
-#: git-admin.php:97
+#: google-integration-toolkit.php:296
+msgid "or"
+msgstr ""
+
+#: google-integration-toolkit.php:298
 msgid "Please put bolded part only to the field above."
 msgstr ""
 
-#: git-admin.php:103
+#: google-integration-toolkit.php:304
 msgid "Verification file name:"
 msgstr ""
 
-#: git-admin.php:107
+#: google-integration-toolkit.php:308
 #, php-format
 msgid "Name of this file starts with 'google', e.g. %s"
 msgstr ""
 
-#: git-admin.php:112
+#: google-integration-toolkit.php:313
 msgid "Google Analytics:"
 msgstr ""
 
-#: git-admin.php:116
+#: google-integration-toolkit.php:317
 msgid "Google Analytics ID:"
 msgstr ""
 
-#: git-admin.php:120
+#: google-integration-toolkit.php:321
 msgid ""
 "Please find following line in your GA tracking code and copy bolded part to "
 "the field above:"
 msgstr ""
 
-#: git-admin.php:127
+#: google-integration-toolkit.php:328
 msgid "Enable Google AdSense integration:"
 msgstr ""
 
-#: git-admin.php:135
+#: google-integration-toolkit.php:336
 msgid "RSS/Atom Feeds tagging:"
 msgstr ""
 
-#: git-admin.php:139
+#: google-integration-toolkit.php:340
 msgid "Enable RSS/Atom Feeds tagging:"
 msgstr ""
 
-#: git-admin.php:143
+#: google-integration-toolkit.php:344
 msgid ""
 "This option tags all links in RSS/Atom feeds. This allows to track visitors "
 "from your feeds using Google Analytics."
 msgstr ""
 
-#: git-admin.php:149
+#: google-integration-toolkit.php:350
 msgid "Source name:"
 msgstr ""
 
-#: git-admin.php:153
+#: google-integration-toolkit.php:354
 msgid ""
 "This value will be used as a value for the <code>utm_source</code> parameter."
 msgstr ""
 
-#: git-admin.php:159
+#: google-integration-toolkit.php:360
 msgid "Medium name:"
 msgstr ""
 
-#: git-admin.php:163
+#: google-integration-toolkit.php:364
 msgid ""
 "This value will be used as a value for the <code>utm_medium</code> parameter."
 msgstr ""
 
-#: git-admin.php:169
+#: google-integration-toolkit.php:370
 msgid "Campaign name:"
 msgstr ""
 
-#: git-admin.php:173
+#: google-integration-toolkit.php:374
 msgid ""
 "This value will be used as a value for the <code>utm_campaign</code> "
 "parameter."
 msgstr ""
 
-#: git-admin.php:178
+#: google-integration-toolkit.php:379
 msgid "AdSense Section Targeting:"
 msgstr ""
 
-#: git-admin.php:182
+#: google-integration-toolkit.php:383
 msgid "Enable AdSense Section Targetting for Content:"
 msgstr ""
 
-#: git-admin.php:186
+#: google-integration-toolkit.php:387
 msgid ""
 "This option ads special HTML comment tags around posts, pages and excerpts. "
 "This may improve AdSense ads targeting. You can find more informations <a "
@@ -137,32 +156,32 @@ msgid ""
 "hl=en&answer=23168\">here</a>."
 msgstr ""
 
-#: git-admin.php:192
+#: google-integration-toolkit.php:393
 msgid "Enable AdSense Section Targetting for Comments:"
 msgstr ""
 
-#: git-admin.php:196
+#: google-integration-toolkit.php:397
 msgid "This option ads special HTML comment tags around comments."
 msgstr ""
 
-#: git-admin.php:201
+#: google-integration-toolkit.php:402
 msgid "404 errors tracking:"
 msgstr ""
 
-#: git-admin.php:205
+#: google-integration-toolkit.php:406
 msgid "Track 404 errors with Google Analytics:"
 msgstr ""
 
-#: git-admin.php:208
+#: google-integration-toolkit.php:409
 msgid ""
 "Enable this option to track \"Page not found\" errors using Google Analytics"
 msgstr ""
 
-#: git-admin.php:214
+#: google-integration-toolkit.php:415
 msgid "URL prefix:"
 msgstr ""
 
-#: git-admin.php:218
+#: google-integration-toolkit.php:419
 msgid ""
 "All 404 errors will appear in Analytics Reports as visits to URL like "
 "<code>/404.html?page=[pagename.html?queryparameter]&from=[referrer]</code>, "
@@ -171,13 +190,8 @@ msgid ""
 "can change prefix <code>/404.html</code> to something else using this option."
 msgstr ""
 
-#: git-admin.php:226
+#: google-integration-toolkit.php:427
 msgid "Save settings"
-msgstr ""
-
-#: google-integration-toolkit.php:94
-msgid ""
-"Fatal Google Integration Toolkit error: $this->admin is not initialised!"
 msgstr ""
 
 #. Plugin Name of an extension
