@@ -1,0 +1,212 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Google Integration Toolkit v1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2009-10-08 19:41-0400\n"
+"Last-Translator: Bob <bob@wealthynetizen.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Chinese\n"
+"X-Poedit-Country: PEOPLE'S REPUBLIC OF CHINA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: google-integration-toolkit.php:259
+#@ google-integration-toolkit
+msgid "Configuration has been saved."
+msgstr "配置以存档"
+
+#: google-integration-toolkit.php:267
+#@ google-integration-toolkit
+msgid "Google Integration Toolkit - Options"
+msgstr "谷歌合成工具 - 可选项"
+
+#: google-integration-toolkit.php:274
+#@ google-integration-toolkit
+msgid "Google Webmasters Tools:"
+msgstr "谷歌网站站长工具："
+
+#: google-integration-toolkit.php:278
+#@ google-integration-toolkit
+msgid "Page verification method:"
+msgstr "网页确认方法："
+
+#: google-integration-toolkit.php:281
+#@ google-integration-toolkit
+msgid "Meta tag <code>&lt;meta name=&quot;google-site-verification&quot; content=&quot;...&quot; /&gt;</code>"
+msgstr "Meta tag <code>&lt;meta name=&quot;google-site-verification&quot; content=&quot;...&quot; /&gt;</code>"
+
+#: google-integration-toolkit.php:282
+#@ google-integration-toolkit
+msgid "Meta tag <code>&lt;meta name=&quot;verify-v1&quot; content=&quot;...&quot; /&gt;</code>"
+msgstr "Meta tag <code>&lt;meta name=&quot;verify-v1&quot; content=&quot;...&quot; /&gt;</code>"
+
+#: google-integration-toolkit.php:283
+#@ google-integration-toolkit
+msgid "File"
+msgstr "文件"
+
+#: google-integration-toolkit.php:284
+#@ google-integration-toolkit
+msgid "<b>Note:</b> Please use <code>google-site-verification</code> meta tag or file to verify new websites. Meta tag <code>verify-v1</code> is supported for backward compatibility only."
+msgstr "<b>注意:</b> 请用 <code>google-site-verification</code> meta tag 或文件确认新网站. Meta tag <code>verify-v1</code> 仅为反向兼容."
+
+#: google-integration-toolkit.php:290
+#@ google-integration-toolkit
+msgid "Meta tag value:"
+msgstr "Meta tag 值:"
+
+#: google-integration-toolkit.php:294
+#@ google-integration-toolkit
+msgid "This tag looks like this:"
+msgstr "Tag 大致如此："
+
+#: google-integration-toolkit.php:296
+#@ google-integration-toolkit
+msgid "or"
+msgstr "或"
+
+#: google-integration-toolkit.php:298
+#@ google-integration-toolkit
+msgid "Please put bolded part only to the field above."
+msgstr "请用以上粗体部分。"
+
+#: google-integration-toolkit.php:304
+#@ google-integration-toolkit
+msgid "Verification file name:"
+msgstr "确认文件名："
+
+#: google-integration-toolkit.php:308
+#, php-format
+#@ google-integration-toolkit
+msgid "Name of this file starts with 'google', e.g. %s"
+msgstr "文件名以 'google' 开始, 如 %s"
+
+#: google-integration-toolkit.php:313
+#@ google-integration-toolkit
+msgid "Google Analytics:"
+msgstr "Google Analytics:"
+
+#: google-integration-toolkit.php:317
+#@ google-integration-toolkit
+msgid "Google Analytics ID:"
+msgstr "Google Analytics ID:"
+
+#: google-integration-toolkit.php:321
+#@ google-integration-toolkit
+msgid "Please find following line in your GA tracking code and copy bolded part to the field above:"
+msgstr "见 Google Analytics 碼 只用粗体部分:"
+
+#: google-integration-toolkit.php:328
+#@ google-integration-toolkit
+msgid "Enable Google AdSense integration:"
+msgstr "启动Google AdSense 合成:"
+
+#: google-integration-toolkit.php:336
+#@ google-integration-toolkit
+msgid "RSS/Atom Feeds tagging:"
+msgstr "RSS/Atom Feeds tagging:"
+
+#: google-integration-toolkit.php:340
+#@ google-integration-toolkit
+msgid "Enable RSS/Atom Feeds tagging:"
+msgstr "启动RSS/Atom Feeds tagging:"
+
+#: google-integration-toolkit.php:344
+#@ google-integration-toolkit
+msgid "This option tags all links in RSS/Atom feeds. This allows to track visitors from your feeds using Google Analytics."
+msgstr "此选项链接 RSS/Atom feeds. 可以用 Google Analytics跟踪."
+
+#: google-integration-toolkit.php:350
+#@ google-integration-toolkit
+msgid "Source name:"
+msgstr "原名:"
+
+#: google-integration-toolkit.php:354
+#@ google-integration-toolkit
+msgid "This value will be used as a value for the <code>utm_source</code> parameter."
+msgstr "此值用于<code>utm_source</code> 参数."
+
+#: google-integration-toolkit.php:360
+#@ google-integration-toolkit
+msgid "Medium name:"
+msgstr "中间名："
+
+#: google-integration-toolkit.php:364
+#@ google-integration-toolkit
+msgid "This value will be used as a value for the <code>utm_medium</code> parameter."
+msgstr "此值用于<code>utm_medium</code> 参数."
+
+#: google-integration-toolkit.php:370
+#@ google-integration-toolkit
+msgid "Campaign name:"
+msgstr "Campaign 名:"
+
+#: google-integration-toolkit.php:374
+#@ google-integration-toolkit
+msgid "This value will be used as a value for the <code>utm_campaign</code> parameter."
+msgstr "此值用于<code>utm_campaign</code> 参数."
+
+#: google-integration-toolkit.php:379
+#@ google-integration-toolkit
+msgid "AdSense Section Targeting:"
+msgstr "AdSense Section Targeting:"
+
+#: google-integration-toolkit.php:383
+#@ google-integration-toolkit
+msgid "Enable AdSense Section Targetting for Content:"
+msgstr "启动AdSense Section Targetting for Content:"
+
+#: google-integration-toolkit.php:387
+#@ google-integration-toolkit
+msgid "This option ads special HTML comment tags around posts, pages and excerpts. This may improve AdSense ads targeting. You can find more informations <a href=\"https://www.google.com/adsense/support/bin/answer.py?hl=en&answer=23168\">here</a>."
+msgstr "此选项起动 AdSense ads targeting. 详情见 <a href=\"https://www.google.com/adsense/support/bin/answer.py?hl=en&answer=23168\">此</a>."
+
+#: google-integration-toolkit.php:393
+#@ google-integration-toolkit
+msgid "Enable AdSense Section Targetting for Comments:"
+msgstr "启动AdSense Section Targetting for Comments:"
+
+#: google-integration-toolkit.php:397
+#@ google-integration-toolkit
+msgid "This option ads special HTML comment tags around comments."
+msgstr "此选项起动 HTML comment tags. "
+
+#: google-integration-toolkit.php:402
+#@ google-integration-toolkit
+msgid "404 errors tracking:"
+msgstr "404 错误跟踪:"
+
+#: google-integration-toolkit.php:406
+#@ google-integration-toolkit
+msgid "Track 404 errors with Google Analytics:"
+msgstr "用Google Analytics 404 错误跟踪:"
+
+#: google-integration-toolkit.php:409
+#@ google-integration-toolkit
+msgid "Enable this option to track \"Page not found\" errors using Google Analytics"
+msgstr "用Google Analytics \"Page not found\" 错误跟踪:"
+
+#: google-integration-toolkit.php:415
+#@ google-integration-toolkit
+msgid "URL prefix:"
+msgstr "URL 前缀:"
+
+#: google-integration-toolkit.php:419
+#@ google-integration-toolkit
+msgid "All 404 errors will appear in Analytics Reports as visits to URL like <code>/404.html?page=[pagename.html?queryparameter]&from=[referrer]</code>, where <code>[pagename.html?queryparameters]</code> is the missing page name and referrer is the page URL from where the user reached the 404 page. You can change prefix <code>/404.html</code> to something else using this option."
+msgstr "所有404 错误将于 Analytics Reports 中<code>/404.html?page=[pagename.html?queryparameter]&from=[referrer]</code>, <code>[pagename.html?queryparameters]</code> 是出错 URL。可用  <code>/404.html</code>."
+
+#: google-integration-toolkit.php:427
+#@ google-integration-toolkit
+msgid "Save settings"
+msgstr "存档"
+
