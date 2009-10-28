@@ -1,0 +1,163 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tweet This\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-07-30 00:38-0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Daniel Frużyński <daniel [A-T] poradnik-webmastera.com>\n"
+"Language-Team: Fat Cow <zhr@tut.by>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: RUSSIAN FEDERATION\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: git-admin.php:60
+msgid "Configuration has been saved."
+msgstr "Configurazioni salvate"
+
+#: git-admin.php:68
+msgid "Google Integration Toolkit - Options"
+msgstr "Google Integration Toolkit - Opzioni"
+
+#: git-admin.php:74
+msgid "Google Webmasters Tools:"
+msgstr "Google Webmasters Tools:"
+
+#: git-admin.php:78
+msgid "Page verification method:"
+msgstr "Pagina di verifica:"
+
+#: git-admin.php:81
+msgid "Meta tag"
+msgstr "Meta tag"
+
+#: git-admin.php:82
+msgid "File"
+msgstr "File"
+
+#: git-admin.php:88
+msgid "Meta tag value:"
+msgstr "Valore Meta Tag:"
+
+#: git-admin.php:92
+msgid "This tag looks like this:"
+msgstr "Questo tag è simile al seguente:"
+
+#: git-admin.php:94
+msgid "Please put bolded part only to the field above."
+msgstr "Si prega di mettere in grassetto solo una parte del campo precedente."
+
+#: git-admin.php:100
+msgid "Verification file name:"
+msgstr "Verifica nome del  file:"
+
+#: git-admin.php:104
+#, php-format
+msgid "Name of this file starts with 'google', e.g. %s"
+msgstr "Il nome di questo file inizia con  'google', e.g. %s"
+
+#: git-admin.php:108
+msgid "Google Analytics:"
+msgstr "Google Analytics:"
+
+#: git-admin.php:112
+msgid "Google Analytics ID:"
+msgstr "Google Analytics ID:"
+
+#: git-admin.php:116
+msgid "Please find following line in your GA tracking code and copy bolded part to the field above:"
+msgstr "Si prega di trovare la seguente riga nel codice di monitoraggio GA e copiarne parte in grassetto al campo precedente:"
+
+#: git-admin.php:123
+msgid "Enable Google AdSense integration:"
+msgstr "Abilita l'integrazione con Google AdSense:"
+
+#: git-admin.php:130
+msgid "RSS/Atom Feeds tagging:"
+msgstr "RSS/Atom Feeds tagging:"
+
+#: git-admin.php:134
+msgid "Enable RSS/Atom Feeds tagging:"
+msgstr "Abilita RSS/Atom Feeds tagging:"
+
+#: git-admin.php:138
+msgid "This option tags all links in RSS/Atom feeds. This allows to track visitors from your feeds using Google Analytics."
+msgstr "Questa opzione tagga tutti i link del RSS/Atom Feed. Abilita il tracciamento dei visitatori dal tuo feed usando GA"
+
+#: git-admin.php:144
+msgid "Source name:"
+msgstr "Fonte nome:"
+
+#: git-admin.php:148
+msgid "This value will be used as a value for the <code>utm_source</code> parameter."
+msgstr "Questo valore sarà usato come un valore per il paramentro <code>utm_source</code>."
+
+#: git-admin.php:154
+msgid "Medium name:"
+msgstr "Nome medio:"
+
+#: git-admin.php:158
+msgid "This value will be used as a value for the <code>utm_medium</code> parameter."
+msgstr "Questo valore sarà usato come un valore per il paramentro <code>utm_medium</code>."
+
+#: git-admin.php:164
+msgid "Campaign name:"
+msgstr "Nome campagna:"
+
+#: git-admin.php:168
+msgid "This value will be used as a value for the <code>utm_campaign</code> parameter."
+msgstr "Questo valore sarà usato come un valore per il paramentro <code>utm_campaign</code>."
+
+#: git-admin.php:172
+msgid "AdSense Section Targeting:"
+msgstr "AdSense Section Targeting:"
+
+#: git-admin.php:176
+msgid "Enable AdSense Section Targetting for Content:"
+msgstr "Abilita AdSense Section Targeting per il contenuto:"
+
+#: git-admin.php:180
+msgid "This option ads special HTML comment tags around posts, pages and excerpts. This may improve AdSense ads targeting. You can find more informations <a href=\"https://www.google.com/adsense/support/bin/answer.py?hl=en&answer=23168\">here</a>."
+msgstr "Questa opzione pubblicizza uno speciale commento in HTML intorno al post,alle pagine e agli estratti. Questo può migliorare il target degli annunci adsense,maggiori informazioni <a href=\"https://www.google.com/adsense/support/bin/answer.py?hl=en&answer=23168\">qui</a>."
+
+#: git-admin.php:186
+msgid "Enable AdSense Section Targetting for Comments:"
+msgstr "Abilita le sezioni targhetizzate di Adsense per i commenti:"
+
+#: git-admin.php:190
+msgid "This option ads special HTML comment tags around comments."
+msgstr "Questa opzione pubblicizza uno speciale commento in HTML intorno ai commenti."
+
+#: git-admin.php:198
+msgid "Save settings"
+msgstr "Salva le modifiche"
+
+#: google-integration-toolkit.php:94
+msgid "Fatal Google Integration Toolkit error: $this->admin is not initialised!"
+msgstr "Errore fatale di  Google Integration Toolkit: $this->amministrazione non inizializzata!"
+
+#. Plugin Name of an extension
+msgid "Google Integration Toolkit"
+msgstr "Google Integration Toolkit"
+
+#. Plugin URI of an extension
+msgid "http://www.poradnik-webmastera.com/projekty/google_integration_toolkit/"
+msgstr "http://www.poradnik-webmastera.com/projekty/google_integration_toolkit/"
+
+#. Description of an extension
+msgid "Integrate Google services (Analytics, Webmaster Tools, etc.) with Your Blog."
+msgstr "Integra i servizi di Google (Analytics, Webmaster Tools, etc.) con il tuo Blog."
+
+#. Author of an extension
+msgid "Daniel Fruyski"
+msgstr "Daniel Fruyski"
+
+#. Author URI of an extension
+msgid "http://www.poradnik-webmastera.com/"
+msgstr "http://www.poradnik-webmastera.com/"
+
