@@ -3,7 +3,7 @@ Contributors: sirzooro
 Tags: analytics, feed, feeds, google, gwt, integration, rss, seo, statistics, stats, tracking, section targeting, ad, ads, adsense, advertising, comment, comments, 404
 Requires at least: 2.7
 Tested up to: 2.9.9
-Stable tag: 1.3.3
+Stable tag: 1.3.4
 
 This plugin helps you to integrate Google services (Analytics, Webmaster Tools, etc.) with Your Blog.
 
@@ -27,6 +27,7 @@ Available translations:
 * Belorussian (be_BY) - thanks [ilyuha](http://antsar.info/)
 * Chinese (zn_CH) - thanks [BoB](http://wealthynetizen.com/)
 * Italian (it_IT) - thanks [Stefan Des](http://www.stefandes.com/)
+* Danish (da_DK) - thanks [GeorgWP](http://wordpress.blogos.dk/)
 
 More features soon!
 
@@ -53,6 +54,9 @@ Please make sure that you use Google Integration Toolkit in version 1.3 or newer
 Starting from October 2009 Google changed name of its meta verification tag from `<meta name="verify-v1" content="..." />` to `<meta name="google-site-verification" content="..." />`. Please make sure that you are using Google Integration Toolkit in version 1.3 or newer, and check its configuration to make sure you use the new tag.
 
 == Changelog ==
+
+= 1.3.4 =
+* Added Danish translation (thanks GeorgWP)
 
 = 1.3.3 =
 * Marked as compatible with WP 2.9.x
