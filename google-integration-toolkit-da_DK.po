@@ -1,0 +1,172 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Google Integration Toolkit 1.3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-10-15 08:43+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Team Blogos <wordpress@blogos.dk>\n"
+"Language-Team: Team Blogos <wordpress@blogos.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2;plural=n != 1;\n"
+"X-Poedit-Language: Danish\n"
+"X-Poedit-Country: DENMARK\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_c;_e;__ngettext:1,2;__ngettext_noop:1,2;_n:1,2;_nc:1,2;_n_noop:1,2\n"
+"X-Poedit-Basepath: d:\\wordpress\\plugins\\google-integration-toolkit\n"
+"X-Poedit-SearchPath-0: d:\\wordpress\\plugins\\google-integration-toolkit\n"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:259
+msgid "Configuration has been saved."
+msgstr "Opsætning blev gemt."
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:267
+msgid "Google Integration Toolkit - Options"
+msgstr "Google Integration Toolkit - Indstillinger"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:274
+msgid "Google Webmasters Tools:"
+msgstr "Google Webmasters Tools:"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:278
+msgid "Page verification method:"
+msgstr "Metode for sideverifikation:"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:281
+msgid "Meta tag <code>&lt;meta name=&quot;google-site-verification&quot; content=&quot;...&quot; /&gt;</code>"
+msgstr "Meta-tag <code>&lt;meta name=&quot;google-site-verification&quot; content=&quot;...&quot; /&gt;</code>"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:282
+msgid "Meta tag <code>&lt;meta name=&quot;verify-v1&quot; content=&quot;...&quot; /&gt;</code>"
+msgstr "Meta-tag <code>&lt;meta name=&quot;verify-v1&quot; content=&quot;...&quot; /&gt;</code>"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:283
+msgid "File"
+msgstr "Fil"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:284
+msgid "<b>Note:</b> Please use <code>google-site-verification</code> meta tag or file to verify new websites. Meta tag <code>verify-v1</code> is supported for backward compatibility only."
+msgstr "<b>Bemærk:</b> Brug venligst <code>google-site-verification</code>-metatagget eller fil til at verificere nye websteder. Meta-tag <code>verify-v1</code> understøttes kun af hensyn til bagudkompatibilitet."
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:290
+msgid "Meta tag value:"
+msgstr "Værdi for meta-tag:"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:294
+msgid "This tag looks like this:"
+msgstr "Dette tag ser ud som dette:"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:296
+msgid "or"
+msgstr "eller"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:298
+msgid "Please put bolded part only to the field above."
+msgstr "Indsæt kun det, der er fremhævet med fed, i feltet ovenfor."
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:304
+msgid "Verification file name:"
+msgstr "Navn på verifikationsfil:"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:308
+#, php-format
+msgid "Name of this file starts with 'google', e.g. %s"
+msgstr "Navnet på denne fil starter med 'google', fx %s"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:313
+msgid "Google Analytics:"
+msgstr "Google Analytics:"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:317
+msgid "Google Analytics ID:"
+msgstr "Google Analytics ID:"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:321
+msgid "Please find following line in your GA tracking code and copy bolded part to the field above:"
+msgstr "Find venligst den følgende linje i din GA-sporingskode og kopiér den del, der er fremhævet med fed, ind i feltet ovenfor:"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:328
+msgid "Enable Google AdSense integration:"
+msgstr "Aktivér Google AdSense-integration:"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:336
+msgid "RSS/Atom Feeds tagging:"
+msgstr "Tagging af RSS/Atom-feeds:"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:340
+msgid "Enable RSS/Atom Feeds tagging:"
+msgstr "Aktivér tagging af RSS/Atom-feeds"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:344
+msgid "This option tags all links in RSS/Atom feeds. This allows to track visitors from your feeds using Google Analytics."
+msgstr "Denne indstilling tagger alle links i RSS-/Atom-feeds. Dette gør det muligt at spore besøgende fra dine feeds med Google Analytics."
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:350
+msgid "Source name:"
+msgstr "Kilde-navn:"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:354
+msgid "This value will be used as a value for the <code>utm_source</code> parameter."
+msgstr "Denne værdi bruges som værdi i <code>utm_source</code>-parameteren."
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:360
+msgid "Medium name:"
+msgstr "Medium-navn:"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:364
+msgid "This value will be used as a value for the <code>utm_medium</code> parameter."
+msgstr "Denne værdi bruges som værdi i <code>utm_medium</code>-parameteren."
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:370
+msgid "Campaign name:"
+msgstr "Kampagne-navn:"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:374
+msgid "This value will be used as a value for the <code>utm_campaign</code> parameter."
+msgstr "Denne værdi bruges som værdi i <code>utm_campaign</code>-parameteren."
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:379
+msgid "AdSense Section Targeting:"
+msgstr "AdSense-sektionsmålretning:"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:383
+msgid "Enable AdSense Section Targetting for Content:"
+msgstr "Aktivér AdSense-sektionsmålretning for indhold:"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:387
+msgid "This option ads special HTML comment tags around posts, pages and excerpts. This may improve AdSense ads targeting. You can find more informations <a href=\"https://www.google.com/adsense/support/bin/answer.py?hl=en&answer=23168\">here</a>."
+msgstr "Dette valg tilføjer specielle HTML-kommentartags omkring indlæg, sider og uddrag. Det kan forbedre AdSense-annnoncemålretning. Du kan finde flere informationer <a href=\"https://www.google.com/adsense/support/bin/answer.py?hl=en&answer=23168\">her</a>."
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:393
+msgid "Enable AdSense Section Targetting for Comments:"
+msgstr "AdSense-sektionsmålretning for kommentarer:"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:397
+msgid "This option ads special HTML comment tags around comments."
+msgstr "Dette valg tilføjer specielle HTML-kommentartags omkring kommentarer."
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:402
+msgid "404 errors tracking:"
+msgstr "Sporing af 404-fejl:"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:406
+msgid "Track 404 errors with Google Analytics:"
+msgstr "Spor 404-fejl med Google Analytics:"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:409
+msgid "Enable this option to track \"Page not found\" errors using Google Analytics"
+msgstr "Aktivér denne indstilling, hvis du vil spore \"Side ikke fundet\"-fejl, når du bruger Google Analytics"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:415
+msgid "URL prefix:"
+msgstr "URL-præfiks:"
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:419
+msgid "All 404 errors will appear in Analytics Reports as visits to URL like <code>/404.html?page=[pagename.html?queryparameter]&from=[referrer]</code>, where <code>[pagename.html?queryparameters]</code> is the missing page name and referrer is the page URL from where the user reached the 404 page. You can change prefix <code>/404.html</code> to something else using this option."
+msgstr "Alle 404-fejl vil blive vist i Analytics Reports som besøg til URL&#39;er som <code>/404.html?page=[pagename.html?queryparameter]&from=[referrer]</code>, hvor <code>[pagename.html?queryparameters]</code> er navnet på den manglende side og referrer er side-URL&#39;en, som brugeren kom til fejl 404-siden fra.Du kan ændre præfikset <code>/404.html</code> til noget andet med denne indstilling."
+
+#: d:\wordpress\plugins\google-integration-toolkit/google-integration-toolkit.php:427
+msgid "Save settings"
+msgstr "Gem ændringer"
+
