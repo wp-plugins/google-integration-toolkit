@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Google Integration Toolkit 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/google-integration-toolkit\n"
-"POT-Creation-Date: 2009-10-03 13:55+0000\n"
-"PO-Revision-Date: 2009-10-03 15:57+0100\n"
+"POT-Creation-Date: 2010-01-04 21:53+0000\n"
+"PO-Revision-Date: 2010-01-04 22:55+0100\n"
 "Last-Translator: Daniel Frużyński <daniel [A-T] poradnik-webmastera.com>\n"
 "Language-Team: Daniel Frużyński <daniel [A-T] poradnik-webmastera.com>\n"
 "MIME-Version: 1.0\n"
@@ -17,157 +17,158 @@ msgstr ""
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: POLAND\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2\n"
 
-#: google-integration-toolkit.php:259
+#: google-integration-toolkit.php:251
 msgid "Configuration has been saved."
 msgstr "Konfiguracja została zapisana."
 
-#: google-integration-toolkit.php:267
+#: google-integration-toolkit.php:258
 msgid "Google Integration Toolkit - Options"
 msgstr "Google Integration Toolkit - Opcje"
 
-#: google-integration-toolkit.php:274
+#: google-integration-toolkit.php:265
 msgid "Google Webmasters Tools:"
 msgstr "Narzędzia Google dla Webmasterów:"
 
-#: google-integration-toolkit.php:278
+#: google-integration-toolkit.php:269
 msgid "Page verification method:"
 msgstr "Metoda weryfikacji strony:"
 
-#: google-integration-toolkit.php:281
+#: google-integration-toolkit.php:272
 msgid "Meta tag <code>&lt;meta name=&quot;google-site-verification&quot; content=&quot;...&quot; /&gt;</code>"
 msgstr "Meta tag <code>&lt;meta name=&quot;google-site-verification&quot; content=&quot;...&quot; /&gt;</code>"
 
-#: google-integration-toolkit.php:282
+#: google-integration-toolkit.php:273
 msgid "Meta tag <code>&lt;meta name=&quot;verify-v1&quot; content=&quot;...&quot; /&gt;</code>"
 msgstr "Meta tag <code>&lt;meta name=&quot;verify-v1&quot; content=&quot;...&quot; /&gt;</code>"
 
-#: google-integration-toolkit.php:283
+#: google-integration-toolkit.php:274
 msgid "File"
 msgstr "Plik"
 
-#: google-integration-toolkit.php:284
+#: google-integration-toolkit.php:275
 msgid "<b>Note:</b> Please use <code>google-site-verification</code> meta tag or file to verify new websites. Meta tag <code>verify-v1</code> is supported for backward compatibility only."
 msgstr "<b>Uwaga:</b> Proszę używać meta tagu <code>google-site-verification</code> albo pliku do weryfikacji nowych stron. Meta tag <code>verify-v1</code> jest obsługiwany tylko dla zapewnienia kompatybilności wstecz."
 
-#: google-integration-toolkit.php:290
+#: google-integration-toolkit.php:281
 msgid "Meta tag value:"
 msgstr "Wartość tagu meta:"
 
-#: google-integration-toolkit.php:294
+#: google-integration-toolkit.php:285
 msgid "This tag looks like this:"
 msgstr "Ten tag wygląda następująco:"
 
-#: google-integration-toolkit.php:296
+#: google-integration-toolkit.php:287
 msgid "or"
 msgstr "lub"
 
-#: google-integration-toolkit.php:298
-msgid "Please put bolded part only to the field above."
-msgstr "Proszę wkleić do powyższego pola tylko pogrubiony fragment."
+#: google-integration-toolkit.php:289
+msgid "Please put <b>marked part only</b> to the field above."
+msgstr "Proszę wkleić do powyższego pola tylko zaznaczony fragment."
 
-#: google-integration-toolkit.php:304
+#: google-integration-toolkit.php:295
 msgid "Verification file name:"
 msgstr "Nazwa pliku weryfikacyjnego:"
 
-#: google-integration-toolkit.php:308
+#: google-integration-toolkit.php:299
 #, php-format
 msgid "Name of this file starts with 'google', e.g. %s"
 msgstr "Nazwa tego pliku zaczyna się od \"google\", np. %s"
 
-#: google-integration-toolkit.php:313
+#: google-integration-toolkit.php:304
 msgid "Google Analytics:"
 msgstr "Google Analytics:"
 
-#: google-integration-toolkit.php:317
+#: google-integration-toolkit.php:308
 msgid "Google Analytics ID:"
 msgstr "Identyfikator Google Analytics:"
 
-#: google-integration-toolkit.php:321
+#: google-integration-toolkit.php:312
 msgid "Please find following line in your GA tracking code and copy bolded part to the field above:"
 msgstr "Odszukaj poniższą linię w swoim kodzie śledzenia GA i wklej pogrubiony fragment do powyższego pola:"
 
-#: google-integration-toolkit.php:328
+#: google-integration-toolkit.php:319
 msgid "Enable Google AdSense integration:"
 msgstr "Włącz integrację z Google AdSense:"
 
-#: google-integration-toolkit.php:336
+#: google-integration-toolkit.php:327
 msgid "RSS/Atom Feeds tagging:"
 msgstr "Tagowanie kanałów RSS/Atom:"
 
-#: google-integration-toolkit.php:340
+#: google-integration-toolkit.php:331
 msgid "Enable RSS/Atom Feeds tagging:"
 msgstr "Włącz tagowanie kanałów RSS/Atom:"
 
-#: google-integration-toolkit.php:344
+#: google-integration-toolkit.php:335
 msgid "This option tags all links in RSS/Atom feeds. This allows to track visitors from your feeds using Google Analytics."
 msgstr "Ta opcja włącza tagowanie linków w kanałach RSS/Atom. Pozwala to na śledzenie odwiedzających z Twoich kanałów za pomocą Google Analytics."
 
-#: google-integration-toolkit.php:350
+#: google-integration-toolkit.php:341
 msgid "Source name:"
 msgstr "Nazwa źródła:"
 
-#: google-integration-toolkit.php:354
+#: google-integration-toolkit.php:345
 msgid "This value will be used as a value for the <code>utm_source</code> parameter."
 msgstr "Ta wartość zostanie użyta jako wartość parametru <code>utm_source</code>."
 
-#: google-integration-toolkit.php:360
+#: google-integration-toolkit.php:351
 msgid "Medium name:"
 msgstr "Nazwa medium:"
 
-#: google-integration-toolkit.php:364
+#: google-integration-toolkit.php:355
 msgid "This value will be used as a value for the <code>utm_medium</code> parameter."
 msgstr "Ta wartość zostanie użyta jako wartość parametru <code>utm_medium</code>."
 
-#: google-integration-toolkit.php:370
+#: google-integration-toolkit.php:361
 msgid "Campaign name:"
 msgstr "Nazwa kampanii:"
 
-#: google-integration-toolkit.php:374
+#: google-integration-toolkit.php:365
 msgid "This value will be used as a value for the <code>utm_campaign</code> parameter."
 msgstr "Ta wartość zostanie użyta jako wartość parametru <code>utm_campaign</code>."
 
-#: google-integration-toolkit.php:379
+#: google-integration-toolkit.php:370
 msgid "AdSense Section Targeting:"
 msgstr "AdSense - kierowanie na sekcje"
 
-#: google-integration-toolkit.php:383
+#: google-integration-toolkit.php:374
 msgid "Enable AdSense Section Targetting for Content:"
 msgstr "Włącz kierowanie na sekcje dla AdSense dla treści:"
 
-#: google-integration-toolkit.php:387
+#: google-integration-toolkit.php:378
 msgid "This option ads special HTML comment tags around posts, pages and excerpts. This may improve AdSense ads targeting. You can find more informations <a href=\"https://www.google.com/adsense/support/bin/answer.py?hl=en&answer=23168\">here</a>."
 msgstr "Ta opcja dodaje specjalne tagi komentarzy HTML dookoła postów, stron i ich fragmentów. To może poprawić dobór reklam AdSense na stronie. Więcej informacji na ten temat znajdziesz <a href=\"https://www.google.com/adsense/support/bin/answer.py?hl=pl&answer=23168\">tutaj</a>."
 
-#: google-integration-toolkit.php:393
+#: google-integration-toolkit.php:384
 msgid "Enable AdSense Section Targetting for Comments:"
 msgstr "Włącz kierowanie na sekcje AdSense dla komentarzy:"
 
-#: google-integration-toolkit.php:397
+#: google-integration-toolkit.php:388
 msgid "This option ads special HTML comment tags around comments."
 msgstr "Ta opcja dodaje specjalne tagi komentarzy HTML dookoła komentarzy"
 
-#: google-integration-toolkit.php:402
+#: google-integration-toolkit.php:393
 msgid "404 errors tracking:"
 msgstr "Śledzenie błędów 404:"
 
-#: google-integration-toolkit.php:406
+#: google-integration-toolkit.php:397
 msgid "Track 404 errors with Google Analytics:"
 msgstr "Śledź błędy 404 używając Google Analytics:"
 
-#: google-integration-toolkit.php:409
+#: google-integration-toolkit.php:400
 msgid "Enable this option to track \"Page not found\" errors using Google Analytics"
 msgstr "Włącz tą opcję aby śledzić błędy \"Nie znaleziono strony\" za pomocą Google Analytics"
 
-#: google-integration-toolkit.php:415
+#: google-integration-toolkit.php:406
 msgid "URL prefix:"
 msgstr "Prefiks adresu:"
 
-#: google-integration-toolkit.php:419
+#: google-integration-toolkit.php:410
 msgid "All 404 errors will appear in Analytics Reports as visits to URL like <code>/404.html?page=[pagename.html?queryparameter]&from=[referrer]</code>, where <code>[pagename.html?queryparameters]</code> is the missing page name and referrer is the page URL from where the user reached the 404 page. You can change prefix <code>/404.html</code> to something else using this option."
 msgstr "Wszystkie błędy 404 pojawią się w raportach Google Analytics jako wywołania adresów typu <code>/404.html?page=[pagename.html?queryparameter]&from=[referrer]</code>, gdzie <code>[pagename.html?queryparameters]</code> jest adresem nie znalezionej strony, a referer jest adresem strony z której użytkownik wszedł na stronę 404. Możesz zmienić prefiks <code>/404.html</code> na inny używając tej opcji."
 
-#: google-integration-toolkit.php:427
+#: google-integration-toolkit.php:418
 msgid "Save settings"
 msgstr "Zapisz ustawienia"
 
@@ -184,8 +185,8 @@ msgid "Integrate Google services (Analytics, Webmaster Tools, etc.) with Your Bl
 msgstr "Integruje serwisy Google (Analytics, Webmaster Tools, itp.) z Twoim Blogiem."
 
 #. Author of an extension
-msgid "Daniel Fruyski"
-msgstr "Daniel Fruyski"
+msgid "Daniel Frużyński"
+msgstr "Daniel Frużyński"
 
 #. Author URI of an extension
 msgid "http://www.poradnik-webmastera.com/"
