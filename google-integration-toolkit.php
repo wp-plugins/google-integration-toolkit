@@ -28,121 +28,122 @@ Text Domain: google-integration-toolkit
 
 
 if ( !class_exists( 'GoogleIntegrationToolkit' ) ) {
-	class GoogleIntegrationToolkit {
-		// Constructor
-		function GoogleIntegrationToolkit() {
-			// Initialisation
-			add_action( 'init', array( &$this, 'init' ) );
-			add_action( 'admin_init', array( &$this, 'admin_init' ) );
-			
-			// Add option to Admin menu
-			add_action( 'admin_menu', array( &$this, 'admin_menu' ) );
-			
-			// URL handler for GWT verification
-			add_filter( 'status_header', array( &$this, 'status_header' ), 1, 2 );
-			
-			// Extra entries in <head> section
-			add_action( 'wp_head', array( &$this, 'wp_head' ) );
-			
-			// Extra content just before </body>
-			add_action( 'wp_footer', array( &$this, 'wp_footer' ) );
-			
-			// RSS tagging
-			add_filter( 'the_permalink_rss', array( &$this, 'the_permalink_rss' ) );
-			add_filter( 'the_content', array( &$this, 'the_content' ) );
-			
-			// Modify post excerpt and comments for various reasons
-			add_filter( 'the_excerpt', array( &$this, 'the_excerpt' ) );
-			
-			// Modify post content and comments for various reasons
-			add_filter( 'comment_text', array( &$this, 'comment_text' ) );
-		}
+
+class GoogleIntegrationToolkit {
+	// Constructor
+	function GoogleIntegrationToolkit() {
+		// Initialisation
+		add_action( 'init', array( &$this, 'init' ) );
+		add_action( 'admin_init', array( &$this, 'admin_init' ) );
 		
-		// Initialise plugin
-		function init() {
-			load_plugin_textdomain( 'google-integration-toolkit', false, dirname( plugin_basename( __FILE__ ) ).'/lang' );
-		}
-		
-		// Plugin initialisation - admin
-		function admin_init() {
-			// Register plugin options
-			register_setting( 'google-integration-toolkit', 'git_gwt_mode', array( &$this, 'sanitize_gwt_mode' ) );
-			register_setting( 'google-integration-toolkit', 'git_gwt_meta', array( &$this, 'sanitize_metaverify' ) );
-			register_setting( 'google-integration-toolkit', 'git_gwt_filename', 'trim' );
-			register_setting( 'google-integration-toolkit', 'git_analytics_id', 'trim' );
-			register_setting( 'google-integration-toolkit', 'git_analytics_adsense', array( &$this, 'sanitize_bool' ) );
-			register_setting( 'google-integration-toolkit', 'git_rss_tagging', array( &$this, 'sanitize_bool' ) );
-			register_setting( 'google-integration-toolkit', 'git_rss_tag_source', 'trim' );
-			register_setting( 'google-integration-toolkit', 'git_rss_tag_medium', 'trim' );
-			register_setting( 'google-integration-toolkit', 'git_rss_tag_campaign', 'trim' );
-			register_setting( 'google-integration-toolkit', 'git_adsense_tag_posts', array( &$this, 'sanitize_bool' ) );
-			register_setting( 'google-integration-toolkit', 'git_adsense_tag_comments', array( &$this, 'sanitize_bool' ) );
-			register_setting( 'google-integration-toolkit', 'git_analytics_track_404', array( &$this, 'sanitize_bool' ) );
-			register_setting( 'google-integration-toolkit', 'git_analytics_track_404_prefix', 'trim' );
-		}
-		
-		// Add Admin menu option
-		function admin_menu() {
-			// admin_init is called later, so need to use proxy method here
-			add_submenu_page( 'options-general.php', 'Google Integration Toolkit', 
-				'Google Integration Toolkit', 'manage_options', __FILE__, array( $this, 'options_panel' ) );
-		}
+		// Add option to Admin menu
+		add_action( 'admin_menu', array( &$this, 'admin_menu' ) );
 		
 		// URL handler for GWT verification
-		function status_header( $status_header, $header ) {
-			if ( ( $header == 404 ) && ( get_option( 'git_gwt_mode' ) == 'file' ) ) {
-				$filename = get_option( 'git_gwt_filename' );
-				if ( $filename != '' ) {
-					// Extract root dir from blog url
-					$root = '/';
-					if ( preg_match( '#^http://[^/]+(/.+)$#', get_option( 'siteurl' ), $matches ) ) {
-						$root = $matches[1];
-					}
-					// Make sure it ends with slash
-					if ( $root[ strlen($root) - 1 ] != '/' ) {
-						$root .= '/';
-					}
-					// Check if request is for GWT verification file
-					if ( $root.$filename == $_SERVER['REQUEST_URI'] ) {
-						//wp_die( 'Welcome, Google!', '200 OK', array( 'response' => 200 ) );
-						echo 'google-site-verification: ', $filename;
-						exit();
-					}
-				}
-			}
-			
-			return $status_header;
-		}
+		add_filter( 'status_header', array( &$this, 'status_header' ), 1, 2 );
 		
 		// Extra entries in <head> section
-		function wp_head() {
-			// Google Webmasters Tools
-			$gwt_mode = get_option( 'git_gwt_mode' );
-			$meta = get_option( 'git_gwt_meta' );
-			if ( ( $gwt_mode == 'meta2' ) && ( $meta != '' ) ) {
-				echo '<meta name="google-site-verification" content="', $meta, '" />', "\n";
+		add_action( 'wp_head', array( &$this, 'wp_head' ) );
+		
+		// Extra content just before </body>
+		add_action( 'wp_footer', array( &$this, 'wp_footer' ) );
+		
+		// RSS tagging
+		add_filter( 'the_permalink_rss', array( &$this, 'the_permalink_rss' ) );
+		add_filter( 'the_content', array( &$this, 'the_content' ) );
+		
+		// Modify post excerpt and comments for various reasons
+		add_filter( 'the_excerpt', array( &$this, 'the_excerpt' ) );
+		
+		// Modify post content and comments for various reasons
+		add_filter( 'comment_text', array( &$this, 'comment_text' ) );
+	}
+	
+	// Initialise plugin
+	function init() {
+		load_plugin_textdomain( 'google-integration-toolkit', false, dirname( plugin_basename( __FILE__ ) ).'/lang' );
+	}
+	
+	// Plugin initialisation - admin
+	function admin_init() {
+		// Register plugin options
+		register_setting( 'google-integration-toolkit', 'git_gwt_mode', array( &$this, 'sanitize_gwt_mode' ) );
+		register_setting( 'google-integration-toolkit', 'git_gwt_meta', array( &$this, 'sanitize_metaverify' ) );
+		register_setting( 'google-integration-toolkit', 'git_gwt_filename', 'trim' );
+		register_setting( 'google-integration-toolkit', 'git_analytics_id', 'trim' );
+		register_setting( 'google-integration-toolkit', 'git_analytics_adsense', array( &$this, 'sanitize_bool' ) );
+		register_setting( 'google-integration-toolkit', 'git_rss_tagging', array( &$this, 'sanitize_bool' ) );
+		register_setting( 'google-integration-toolkit', 'git_rss_tag_source', 'trim' );
+		register_setting( 'google-integration-toolkit', 'git_rss_tag_medium', 'trim' );
+		register_setting( 'google-integration-toolkit', 'git_rss_tag_campaign', 'trim' );
+		register_setting( 'google-integration-toolkit', 'git_adsense_tag_posts', array( &$this, 'sanitize_bool' ) );
+		register_setting( 'google-integration-toolkit', 'git_adsense_tag_comments', array( &$this, 'sanitize_bool' ) );
+		register_setting( 'google-integration-toolkit', 'git_analytics_track_404', array( &$this, 'sanitize_bool' ) );
+		register_setting( 'google-integration-toolkit', 'git_analytics_track_404_prefix', 'trim' );
+	}
+	
+	// Add Admin menu option
+	function admin_menu() {
+		// admin_init is called later, so need to use proxy method here
+		add_submenu_page( 'options-general.php', 'Google Integration Toolkit', 
+			'Google Integration Toolkit', 'manage_options', __FILE__, array( $this, 'options_panel' ) );
+	}
+	
+	// URL handler for GWT verification
+	function status_header( $status_header, $header ) {
+		if ( ( $header == 404 ) && ( get_option( 'git_gwt_mode' ) == 'file' ) ) {
+			$filename = get_option( 'git_gwt_filename' );
+			if ( $filename != '' ) {
+				// Extract root dir from blog url
+				$root = '/';
+				if ( preg_match( '#^http://[^/]+(/.+)$#', get_option( 'siteurl' ), $matches ) ) {
+					$root = $matches[1];
+				}
+				// Make sure it ends with slash
+				if ( $root[ strlen($root) - 1 ] != '/' ) {
+					$root .= '/';
+				}
+				// Check if request is for GWT verification file
+				if ( $root.$filename == $_SERVER['REQUEST_URI'] ) {
+					//wp_die( 'Welcome, Google!', '200 OK', array( 'response' => 200 ) );
+					echo 'google-site-verification: ', $filename;
+					exit();
+				}
 			}
-			elseif ( ( $gwt_mode == 'meta' ) && ( $meta != '' ) ) {
-				echo '<meta name="verify-v1" content="', $meta, '" />', "\n";
-			}
-			
-			// Google Analytics integration with Google AdSense
-			$analytics_id = get_option( 'git_analytics_id' );
-			if ( ( $analytics_id != '' ) && get_option( 'git_analytics_adsense' ) ) {
-				echo <<<EOT
+		}
+		
+		return $status_header;
+	}
+	
+	// Extra entries in <head> section
+	function wp_head() {
+		// Google Webmasters Tools
+		$gwt_mode = get_option( 'git_gwt_mode' );
+		$meta = get_option( 'git_gwt_meta' );
+		if ( ( $gwt_mode == 'meta2' ) && ( $meta != '' ) ) {
+			echo '<meta name="google-site-verification" content="', $meta, '" />', "\n";
+		}
+		elseif ( ( $gwt_mode == 'meta' ) && ( $meta != '' ) ) {
+			echo '<meta name="verify-v1" content="', $meta, '" />', "\n";
+		}
+		
+		// Google Analytics integration with Google AdSense
+		$analytics_id = get_option( 'git_analytics_id' );
+		if ( ( $analytics_id != '' ) && get_option( 'git_analytics_adsense' ) ) {
+			echo <<<EOT
 <script type="text/javascript">
 window.google_analytics_uacct = "$analytics_id";
 </script>
 
 EOT;
-			}
 		}
-		
-		// Extra content just before </body>
-		function wp_footer() {
-			$analytics_id = get_option( 'git_analytics_id' );
-			if ( $analytics_id != '' ) {
-				echo <<<EOT
+	}
+	
+	// Extra content just before </body>
+	function wp_footer() {
+		$analytics_id = get_option( 'git_analytics_id' );
+		if ( $analytics_id != '' ) {
+			echo <<<EOT
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -152,106 +153,106 @@ try {
 var pageTracker = _gat._getTracker("$analytics_id");
 
 EOT;
-				if ( is_404() && get_option( 'git_analytics_track_404' ) ) {
-					echo 'pageTracker._trackPageview("' . get_option( 'git_analytics_track_404_prefix' ) . 
-						'?page=" + document.location.pathname + document.location.search + "&from=" + document.referrer);', "\n";
-				} else {
-					echo 'pageTracker._setAllowAnchor(true);', "\n";
-					echo 'pageTracker._trackPageview();', "\n";
-				}
-				echo <<<EOT
+			if ( is_404() && get_option( 'git_analytics_track_404' ) ) {
+				echo 'pageTracker._trackPageview("' . get_option( 'git_analytics_track_404_prefix' ) . 
+					'?page=" + document.location.pathname + document.location.search + "&from=" + document.referrer);', "\n";
+			} else {
+				echo 'pageTracker._setAllowAnchor(true);', "\n";
+				echo 'pageTracker._trackPageview();', "\n";
+			}
+			echo <<<EOT
 } catch(err) {}</script>
 
 EOT;
-			}
 		}
+	}
+	
+	// Add tags to the rss links
+	function tag_rss_link( $link, $use_hash ) {
+		$tag = 'utm_source='.get_option( 'git_rss_tag_source' )
+			.'&amp;utm_medium='.get_option( 'git_rss_tag_medium' )
+			.'&amp;utm_campaign='.get_option( 'git_rss_tag_campaign' );
 		
-		// Add tags to the rss links
-		function tag_rss_link( $link, $use_hash ) {
-			$tag = 'utm_source='.get_option( 'git_rss_tag_source' )
-				.'&amp;utm_medium='.get_option( 'git_rss_tag_medium' )
-				.'&amp;utm_campaign='.get_option( 'git_rss_tag_campaign' );
-			
-			if ( $use_hash ) {
-				return $link.'#'.$tag;
-			} elseif ( strpos( $link, '?' ) === false ) {
-				return $link.'?'.$tag;
-			} else {
-				return $link.'&amp;'.$tag;
-			}
+		if ( $use_hash ) {
+			return $link.'#'.$tag;
+		} elseif ( strpos( $link, '?' ) === false ) {
+			return $link.'?'.$tag;
+		} else {
+			return $link.'&amp;'.$tag;
 		}
-		
-		// RSS tagging - tag links in RSS
-		function the_permalink_rss( $link ) {
-			if ( get_option( 'git_rss_tagging' ) ) {
-				return $this->tag_rss_link( $link, true );
-			} else {
-				return $link;
-			}
+	}
+	
+	// RSS tagging - tag links in RSS
+	function the_permalink_rss( $link ) {
+		if ( get_option( 'git_rss_tagging' ) ) {
+			return $this->tag_rss_link( $link, true );
+		} else {
+			return $link;
 		}
-		
-		// Helper function for tagging links in RSS - tag links in text
-		function update_rss_link( $matches ) {
-			$url = $matches[2];
-			if ( preg_match( '/^https?:/', $url ) ) {
-				// Tag links from this blog only
-				$blogurl = get_option( 'siteurl' );
-				if ( substr( $url, 0, strlen( $blogurl ) ) == $blogurl ) {
-					return $matches[1].$this->tag_rss_link( $url, true );
-				} else {
-					return $matches[1].$url;
-				}
-			} else {
+	}
+	
+	// Helper function for tagging links in RSS - tag links in text
+	function update_rss_link( $matches ) {
+		$url = $matches[2];
+		if ( preg_match( '/^https?:/', $url ) ) {
+			// Tag links from this blog only
+			$blogurl = get_option( 'siteurl' );
+			if ( substr( $url, 0, strlen( $blogurl ) ) == $blogurl ) {
 				return $matches[1].$this->tag_rss_link( $url, true );
+			} else {
+				return $matches[1].$url;
 			}
+		} else {
+			return $matches[1].$this->tag_rss_link( $url, true );
+		}
+	}
+	
+	// Content modification function
+	function the_content( $content ) {
+		// RSS tagging - tag links in RSS' text
+		if ( is_feed() && get_option( 'git_rss_tagging' ) ) {
+			$content = preg_replace_callback( '/(<\s*a\s[^>]*?\bhref\s*=\s*")([^"]+)/', 
+				array( &$this, 'update_rss_link' ), $content );
 		}
 		
-		// Content modification function
-		function the_content( $content ) {
-			// RSS tagging - tag links in RSS' text
-			if ( is_feed() && get_option( 'git_rss_tagging' ) ) {
-				$content = preg_replace_callback( '/(<\s*a\s[^>]*?\bhref\s*=\s*")([^"]+)/', 
-					array( &$this, 'update_rss_link' ), $content );
-			}
-			
-			// AdSense section targetting
-			if ( !is_feed() && get_option( 'git_adsense_tag_posts' ) ) {
-				return '<!-- google_ad_section_start -->'.$content.'<!-- google_ad_section_end -->';
-			}
-			
-			return $content;
+		// AdSense section targetting
+		if ( !is_feed() && get_option( 'git_adsense_tag_posts' ) ) {
+			return '<!-- google_ad_section_start -->'.$content.'<!-- google_ad_section_end -->';
 		}
 		
-		// Content excerpts modification function
-		function the_excerpt( $content ) {
-			// AdSense section targetting
-			if ( !is_feed() && get_option( 'git_adsense_tag_posts' ) ) {
-				return '<!-- google_ad_section_start -->'.$content.'<!-- google_ad_section_end -->';
-			}
-			
-			return $content;
+		return $content;
+	}
+	
+	// Content excerpts modification function
+	function the_excerpt( $content ) {
+		// AdSense section targetting
+		if ( !is_feed() && get_option( 'git_adsense_tag_posts' ) ) {
+			return '<!-- google_ad_section_start -->'.$content.'<!-- google_ad_section_end -->';
 		}
 		
-		// Comments modification function
-		function comment_text( $content ) {
-			// AdSense section targetting
-			if ( !is_feed() && get_option( 'git_adsense_tag_comments' ) ) {
-				return '<!-- google_ad_section_start -->'.$content.'<!-- google_ad_section_end -->';
-			}
-			
-			return $content;
+		return $content;
+	}
+	
+	// Comments modification function
+	function comment_text( $content ) {
+		// AdSense section targetting
+		if ( !is_feed() && get_option( 'git_adsense_tag_comments' ) ) {
+			return '<!-- google_ad_section_start -->'.$content.'<!-- google_ad_section_end -->';
 		}
 		
-		// Handle options panel
-		function options_panel() {
-			$message = null;
-			if ( isset($_POST['action']) ) {
-				check_admin_referer( 'google-integration-toolkit-options' );
-				$message = __('Configuration has been saved.', 'google-integration-toolkit');
-				echo '<div id="message" class="updated fade"><p>', $message, '</p></div>', "\n";
-			}
-			
-			// HTML settings form here
+		return $content;
+	}
+	
+	// Handle options panel
+	function options_panel() {
+		$message = null;
+		if ( isset($_POST['action']) ) {
+			check_admin_referer( 'google-integration-toolkit-options' );
+			$message = __('Configuration has been saved.', 'google-integration-toolkit');
+			echo '<div id="message" class="updated fade"><p>', $message, '</p></div>', "\n";
+		}
+		
+		// HTML settings form here
 ?>
 <div class="wrap">
 <h2><?php _e('Google Integration Toolkit - Options', 'google-integration-toolkit'); ?></h2>
@@ -420,56 +421,57 @@ EOT;
 </form>
 </div>
 <?php
-		}
-		
-		// Sanitize GWT mode
-		function sanitize_gwt_mode( $mode ) {
-			if ( ( $mode != 'meta' ) && ( $mode != 'meta2' ) && ( $mode != 'file' ) ) {
-				return 'meta2';
-			} else {
-				return $mode;
-			}
-		}
-		
-		// Sanitize bools (checkboxes)
-		function sanitize_bool( $value ) {
-			if ( isset( $value ) && ( $value == 'yes' ) ) {
-				return true;
-			} else {
-				return false;
-			}
-		}
-		
-		// Sanitize meta verify tag for GWT
-		function sanitize_metaverify( $value ) {
-			$value = trim( $value );
-			
-			// Check if someone pasted whole verification meta tag
-			if ( preg_match( '/<meta\s+name="(?:google-site-verification|verify-v1)"\s+content="([^"]+)"/i', 
-				$value, $matches ) ) {
-				// Looks that someone does not like to read too much...
-				$value = $matches[1];
-			}
-			
-			return $value;
+	}
+	
+	// Sanitize GWT mode
+	function sanitize_gwt_mode( $mode ) {
+		if ( ( $mode != 'meta' ) && ( $mode != 'meta2' ) && ( $mode != 'file' ) ) {
+			return 'meta2';
+		} else {
+			return $mode;
 		}
 	}
 	
-	add_option( 'git_gwt_mode', 'meta2' ); // GWT: add meta tag 'google-site-verification' ('meta2') or use file ('file'). 'meta'/'verify-v1' is supported for backward compatibility only
-	add_option( 'git_gwt_meta', '' ); // GWT ID
-	add_option( 'git_gwt_filename', '' ); // GWT FileName
-	add_option( 'git_analytics_id', '' ); // Analytics ID
-	add_option( 'git_analytics_adsense', true ); // Enable Analytics-AdSense integration
-	add_option( 'git_rss_tagging', true ); // Enable RSS links tagging
-	add_option( 'git_rss_tag_source', 'feed' ); // RSS tags - Campaign Source
-	add_option( 'git_rss_tag_medium', 'feed' ); // RSS tags - Campaign Medium
-	add_option( 'git_rss_tag_campaign', 'feed' ); // RSS tags - Campaign Name
-	add_option( 'git_adsense_tag_posts', false ); // AdSense Section Targetting - posts
-	add_option( 'git_adsense_tag_comments', false ); // AdSense Section Targetting - comments
-	add_option( 'git_analytics_track_404', false ); // Track 404 errors using Analytics
-	add_option( 'git_analytics_track_404_prefix', '/404.html' ); // Prefix for 404 tracking using Analytics
+	// Sanitize bools (checkboxes)
+	function sanitize_bool( $value ) {
+		if ( isset( $value ) && ( $value == 'yes' ) ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	
-	$wp_google_integration_toolkit = new GoogleIntegrationToolkit();
+	// Sanitize meta verify tag for GWT
+	function sanitize_metaverify( $value ) {
+		$value = trim( $value );
+		
+		// Check if someone pasted whole verification meta tag
+		if ( preg_match( '/<meta\s+name="(?:google-site-verification|verify-v1)"\s+content="([^"]+)"/i', 
+			$value, $matches ) ) {
+			// Looks that someone does not like to read too much...
+			$value = $matches[1];
+		}
+		
+		return $value;
+	}
+}
+
+add_option( 'git_gwt_mode', 'meta2' ); // GWT: add meta tag 'google-site-verification' ('meta2') or use file ('file'). 'meta'/'verify-v1' is supported for backward compatibility only
+add_option( 'git_gwt_meta', '' ); // GWT ID
+add_option( 'git_gwt_filename', '' ); // GWT FileName
+add_option( 'git_analytics_id', '' ); // Analytics ID
+add_option( 'git_analytics_adsense', true ); // Enable Analytics-AdSense integration
+add_option( 'git_rss_tagging', true ); // Enable RSS links tagging
+add_option( 'git_rss_tag_source', 'feed' ); // RSS tags - Campaign Source
+add_option( 'git_rss_tag_medium', 'feed' ); // RSS tags - Campaign Medium
+add_option( 'git_rss_tag_campaign', 'feed' ); // RSS tags - Campaign Name
+add_option( 'git_adsense_tag_posts', false ); // AdSense Section Targetting - posts
+add_option( 'git_adsense_tag_comments', false ); // AdSense Section Targetting - comments
+add_option( 'git_analytics_track_404', false ); // Track 404 errors using Analytics
+add_option( 'git_analytics_track_404_prefix', '/404.html' ); // Prefix for 404 tracking using Analytics
+
+$wp_google_integration_toolkit = new GoogleIntegrationToolkit();
+
 }
 
 ?>
