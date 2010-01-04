@@ -1,0 +1,189 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Google Integration Toolkit v1.3.4\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/google-integration-toolkit\n"
+"POT-Creation-Date: 2009-10-03 13:55+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Rene - WordPressPluginGuide.com <info@wppg.me>\n"
+"Language-Team: WordPress Plugin Guide <info@wppg.me>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: NETHERLANDS\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: google-integration-toolkit.php:259
+msgid "Configuration has been saved."
+msgstr "Configuratie is opgeslagen."
+
+#: google-integration-toolkit.php:267
+msgid "Google Integration Toolkit - Options"
+msgstr "Google Integratie Hulpmiddelen - Opties"
+
+#: google-integration-toolkit.php:274
+msgid "Google Webmasters Tools:"
+msgstr "Google Webmaster Hulpprogramma's:"
+
+#: google-integration-toolkit.php:278
+msgid "Page verification method:"
+msgstr "Pagina verificatie methode:"
+
+#: google-integration-toolkit.php:281
+msgid "Meta tag <code>&lt;meta name=&quot;google-site-verification&quot; content=&quot;...&quot; /&gt;</code>"
+msgstr "Meta tag <code>&lt;meta name=&quot;google-site-verification&quot; content=&quot;...&quot; /&gt;</code>"
+
+#: google-integration-toolkit.php:282
+msgid "Meta tag <code>&lt;meta name=&quot;verify-v1&quot; content=&quot;...&quot; /&gt;</code>"
+msgstr "Meta tag <code>&lt;meta name=&quot;verify-v1&quot; content=&quot;...&quot; /&gt;</code>"
+
+#: google-integration-toolkit.php:283
+msgid "File"
+msgstr "Bestand"
+
+#: google-integration-toolkit.php:284
+msgid "<b>Note:</b> Please use <code>google-site-verification</code> meta tag or file to verify new websites. Meta tag <code>verify-v1</code> is supported for backward compatibility only."
+msgstr "<b>Opmerking:</b> Gebruik de <code>google-site-verification</code> meta tag of bestand om nieuwe websites te verifieren. De meta tag <code>verify-v1</code> wordt alleen ondersteund voor achterwaartse compatibiliteit."
+
+#: google-integration-toolkit.php:290
+msgid "Meta tag value:"
+msgstr "Meta tag waarde:"
+
+#: google-integration-toolkit.php:294
+msgid "This tag looks like this:"
+msgstr "Deze tag ziet eruit als:"
+
+#: google-integration-toolkit.php:296
+msgid "or"
+msgstr "of"
+
+#: google-integration-toolkit.php:298
+msgid "Please put bolded part only to the field above."
+msgstr "Zet het vetgedrukte gedeelte alleen in het veld hierboven."
+
+#: google-integration-toolkit.php:304
+msgid "Verification file name:"
+msgstr "Verificatie bestandsnaam:"
+
+#: google-integration-toolkit.php:308
+#, php-format
+msgid "Name of this file starts with 'google', e.g. %s"
+msgstr "De naam van dit bestand begint met  'google', bijv. %s"
+
+#: google-integration-toolkit.php:313
+msgid "Google Analytics:"
+msgstr "Google Analytics:"
+
+#: google-integration-toolkit.php:317
+msgid "Google Analytics ID:"
+msgstr "Google Analytics ID:"
+
+#: google-integration-toolkit.php:321
+msgid "Please find following line in your GA tracking code and copy bolded part to the field above:"
+msgstr "Zoek de volgende regel in de GA code en kopieer het vetgedrukte gedeelte in het veld hierboven:"
+
+#: google-integration-toolkit.php:328
+msgid "Enable Google AdSense integration:"
+msgstr "Inschakelen integratie Google Adsense:"
+
+#: google-integration-toolkit.php:336
+msgid "RSS/Atom Feeds tagging:"
+msgstr "RSS/Atom Feeds identificering:"
+
+#: google-integration-toolkit.php:340
+msgid "Enable RSS/Atom Feeds tagging:"
+msgstr "Inschakelen RSS/Atom Feeds identificering:"
+
+#: google-integration-toolkit.php:344
+msgid "This option tags all links in RSS/Atom feeds. This allows to track visitors from your feeds using Google Analytics."
+msgstr "Deze optie identificeert alle links in RSS/Atom feeds, zodat bezoekers van je feeds gevolgd kunnen worden door het gebruik van Google Analytics."
+
+#: google-integration-toolkit.php:350
+msgid "Source name:"
+msgstr "Bron naam:"
+
+#: google-integration-toolkit.php:354
+msgid "This value will be used as a value for the <code>utm_source</code> parameter."
+msgstr "Deze waarde zal gebruikt worden als een waarde voor de <code>utm_source</code> parameter."
+
+#: google-integration-toolkit.php:360
+msgid "Medium name:"
+msgstr "Medium naam:"
+
+#: google-integration-toolkit.php:364
+msgid "This value will be used as a value for the <code>utm_medium</code> parameter."
+msgstr "Deze waarde zal gebruikt worden als een waarde voor de <code>utm_medium</code> parameter."
+
+#: google-integration-toolkit.php:370
+msgid "Campaign name:"
+msgstr "Campagne naam:"
+
+#: google-integration-toolkit.php:374
+msgid "This value will be used as a value for the <code>utm_campaign</code> parameter."
+msgstr "Deze waarde zal gebruikt worden als een waarde voor de <code>utm_campaign</code> parameter."
+
+#: google-integration-toolkit.php:379
+msgid "AdSense Section Targeting:"
+msgstr "Adsense sectie doelgerichtheid:"
+
+#: google-integration-toolkit.php:383
+msgid "Enable AdSense Section Targetting for Content:"
+msgstr "Inschakelen Adsense sectie doelgerichtheid voor content:"
+
+#: google-integration-toolkit.php:387
+msgid "This option ads special HTML comment tags around posts, pages and excerpts. This may improve AdSense ads targeting. You can find more informations <a href=\"https://www.google.com/adsense/support/bin/answer.py?hl=en&answer=23168\">here</a>."
+msgstr "Deze optie voegt speciale HTML commentaar tags rond berichten, pagina's en fragmenten. Dit bevorderd de doelgerichtheid van de Adsense advertenties. Meer informatie kan <a href=\"https://www.google.com/adsense/support/bin/answer.py?hl=en&answer=23168\">hier</a> gevonden worden."
+
+#: google-integration-toolkit.php:393
+msgid "Enable AdSense Section Targetting for Comments:"
+msgstr "Inschakelen Adsense sectie doelgerichtheid voor reacties:"
+
+#: google-integration-toolkit.php:397
+msgid "This option ads special HTML comment tags around comments."
+msgstr "Deze optie voegt speciale HTML commentaar tags rond reacties."
+
+#: google-integration-toolkit.php:402
+msgid "404 errors tracking:"
+msgstr "Bijhouden 404 foutmeldingen:"
+
+#: google-integration-toolkit.php:406
+msgid "Track 404 errors with Google Analytics:"
+msgstr "Bijhouden 404 foutmeldingen met Google Analytics:"
+
+#: google-integration-toolkit.php:409
+msgid "Enable this option to track \"Page not found\" errors using Google Analytics"
+msgstr "Schakel deze optie in om \"Pagina niet gevonden\" fouten bij te houden met Google Analytics"
+
+#: google-integration-toolkit.php:415
+msgid "URL prefix:"
+msgstr "URL voorvoegsel:"
+
+#: google-integration-toolkit.php:419
+msgid "All 404 errors will appear in Analytics Reports as visits to URL like <code>/404.html?page=[pagename.html?queryparameter]&from=[referrer]</code>, where <code>[pagename.html?queryparameters]</code> is the missing page name and referrer is the page URL from where the user reached the 404 page. You can change prefix <code>/404.html</code> to something else using this option."
+msgstr "Alle 404 foutmeldingen worden weergegeven in Analytics rapporten als een bezoek aan een URL als <code>/404.html?page=[pagename.html?queryparameter]&from=[referrer]</code>, waar <code>[pagename.html?queryparameters]</code> is de missende paginanaam en refferer is de pagina URL vanwaar de gebruiker de 404 pagina bereikte. Je kunt het voorvoegsel <code>/404.html</code> veranderen naar iets anders door deze optie te gebruiken."
+
+#: google-integration-toolkit.php:427
+msgid "Save settings"
+msgstr "Instellingen bewaren"
+
+#. Plugin Name of an extension
+msgid "Google Integration Toolkit"
+msgstr "Google Integratie Hulpmiddelen"
+
+#. Plugin URI of an extension
+msgid "http://www.poradnik-webmastera.com/projekty/google_integration_toolkit/"
+msgstr "http://www.poradnik-webmastera.com/projekty/google_integration_toolkit/"
+
+#. Description of an extension
+msgid "Integrate Google services (Analytics, Webmaster Tools, etc.) with Your Blog."
+msgstr "Integreer Google diensten (Analytics, Webmaster Hulpprogramma's enz.) met je blog."
+
+#. Author of an extension
+msgid "Daniel Fruyski"
+msgstr "Daniel Fruyski"
+
+#. Author URI of an extension
+msgid "http://www.poradnik-webmastera.com/"
+msgstr "http://www.poradnik-webmastera.com/"
+

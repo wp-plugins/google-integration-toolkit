@@ -4,12 +4,12 @@ Plugin Name: Google Integration Toolkit
 Plugin URI: http://www.poradnik-webmastera.com/projekty/google_integration_toolkit/
 Description: Integrate Google services (Analytics, Webmaster Tools, etc.) with Your Blog.
 Author: Daniel Frużyński
-Version: 1.3.4
+Version: 1.4
 Author URI: http://www.poradnik-webmastera.com/
 Text Domain: google-integration-toolkit
 */
 
-/*  Copyright 2009  Daniel Frużyński  (email : daniel [A-T] poradnik-webmastera.com)
+/*  Copyright 2009-2010  Daniel Frużyński  (email : daniel [A-T] poradnik-webmastera.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -60,16 +60,14 @@ if ( !class_exists( 'GoogleIntegrationToolkit' ) ) {
 		
 		// Initialise plugin
 		function init() {
-			if ( function_exists( 'load_plugin_textdomain' ) ) {
-				load_plugin_textdomain( 'google-integration-toolkit', PLUGINDIR.'/'.dirname(plugin_basename(__FILE__)) );
-			}
+			load_plugin_textdomain( 'google-integration-toolkit', false, dirname( plugin_basename( __FILE__ ) ).'/lang' );
 		}
 		
 		// Plugin initialisation - admin
 		function admin_init() {
 			// Register plugin options
 			register_setting( 'google-integration-toolkit', 'git_gwt_mode', array( &$this, 'sanitize_gwt_mode' ) );
-			register_setting( 'google-integration-toolkit', 'git_gwt_meta', 'trim' );
+			register_setting( 'google-integration-toolkit', 'git_gwt_meta', array( &$this, 'sanitize_metaverify' ) );
 			register_setting( 'google-integration-toolkit', 'git_gwt_filename', 'trim' );
 			register_setting( 'google-integration-toolkit', 'git_analytics_id', 'trim' );
 			register_setting( 'google-integration-toolkit', 'git_analytics_adsense', array( &$this, 'sanitize_bool' ) );
@@ -85,16 +83,9 @@ if ( !class_exists( 'GoogleIntegrationToolkit' ) ) {
 		
 		// Add Admin menu option
 		function admin_menu() {
-			$file = __FILE__;
-			
-			// hack for 1.5
-			global $wp_version;
-			if ( '1.5' == substr( $wp_version, 0, 3 ) ) {
-				$file = 'google-integration-toolkit/google-integration-toolkit.php';
-			}
 			// admin_init is called later, so need to use proxy method here
 			add_submenu_page( 'options-general.php', 'Google Integration Toolkit', 
-				'Google Integration Toolkit', 10, $file, array( $this, 'options_panel' ) );
+				'Google Integration Toolkit', 'manage_options', __FILE__, array( $this, 'options_panel' ) );
 		}
 		
 		// URL handler for GWT verification
@@ -262,7 +253,6 @@ EOT;
 			
 			// HTML settings form here
 ?>
-<div id="dropmessage" class="updated" style="display:none;"></div>
 <div class="wrap">
 <h2><?php _e('Google Integration Toolkit - Options', 'google-integration-toolkit'); ?></h2>
 
@@ -292,10 +282,10 @@ EOT;
 <td>
 <input type="text" maxlength="100" size="50" id="git_gwt_meta" name="git_gwt_meta" value="<?php echo stripcslashes( get_option( 'git_gwt_meta' ) ); ?>" /><br />
 <?php _e('This tag looks like this:', 'google-integration-toolkit'); ?><br />
-<code>&lt;meta name=&quot;google-site-verification&quot; content=&quot;<b>abcdefghijklmnopqrstuvwzyz123456789abcdefghi</b>&quot; /&gt;</code><br />
+<code>&lt;meta name=&quot;google-site-verification&quot; content=&quot;<b style="background-color:yellow">abcdefghijklmnopqrstuvwzyz123456789abcdefghi</b>&quot; /&gt;</code><br />
 <?php _e('or', 'google-integration-toolkit'); ?><br />
-<code>&lt;meta name=&quot;verify-v1&quot; content=&quot;<b>abcdefghijklmnopqrstuvwzyz123456789abcdefghi</b>&quot; /&gt;</code><br />
-<?php _e('Please put bolded part only to the field above.', 'google-integration-toolkit'); ?>
+<code>&lt;meta name=&quot;verify-v1&quot; content=&quot;<b style="background-color:yellow">abcdefghijklmnopqrstuvwzyz123456789abcdefghi</b>&quot; /&gt;</code><br />
+<?php _e('Please put <b>marked part only</b> to the field above.', 'google-integration-toolkit'); ?>
 </td>
 </tr>
 
@@ -448,6 +438,20 @@ EOT;
 			} else {
 				return false;
 			}
+		}
+		
+		// Sanitize meta verify tag for GWT
+		function sanitize_metaverify( $value ) {
+			$value = trim( $value );
+			
+			// Check if someone pasted whole verification meta tag
+			if ( preg_match( '/<meta\s+name="(?:google-site-verification|verify-v1)"\s+content="([^"]+)"/i', 
+				$value, $matches ) ) {
+				// Looks that someone does not like to read too much...
+				$value = $matches[1];
+			}
+			
+			return $value;
 		}
 	}
 	
