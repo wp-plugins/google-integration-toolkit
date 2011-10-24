@@ -23,7 +23,7 @@ Available translations:
 
 * English
 * Polish (pl_PL) - done by me
-* Russian (ru_RU) - thanks [Fat Cower](http://www.fatcow.com/)
+* Russian (ru_RU) - thanks Fat Cower
 * Belorussian (be_BY) - thanks [ilyuha](http://antsar.info/)
 * Chinese (zn_CH) - thanks [BoB](http://wealthynetizen.com/)
 * Italian (it_IT) - thanks [Stefan Des](http://www.stefandes.com/)
